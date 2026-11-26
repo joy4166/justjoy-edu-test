@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#1e40af" />
+  <meta name="description" content="작은교회 교사를 위한 한 본문 다섯 세대 설교문, 소인원 대본, 무가위 A4 활동지 수업 준비 플랫폼 JUSTJOY" />
+  <title>JUSTJOY 강소교회 다음세대 교육 스튜디오</title>
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/icon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Noto+Sans+KR:wght@400;600;700&display=swap" />
+  <link rel="stylesheet" href="./css/tokens.css" />
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./css/shell.css" />
+  <link rel="stylesheet" href="./css/overlays.css" />
+  <link rel="stylesheet" href="./css/home.css" />
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">본문 바로가기</a>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="./index.html" class="brand-lockup" aria-label="JUSTJOY 홈으로">
+        <img class="brand-logo" src="./assets/justjoy_logo.png" alt="JUSTJOY" width="112" height="24" />
+        <span class="brand-studio-name">강소교회 다음세대 교육 스튜디오</span>
+      </a>
+      <nav class="site-nav" aria-label="주요 메뉴">
+        <a href="./index.html" class="nav-link" data-nav="home">커리큘럼 홈</a>
+        <a href="./studio.html" class="nav-link" data-nav="studio">수업 스튜디오</a>
+        <a href="./about.html" class="nav-link" data-nav="about">교육 방향</a>
+        <a href="./pricing.html" class="nav-link" id="navPricingLink" data-nav="pricing">정기구독</a>
+      </nav>
+      <div class="header-actions">
+        <button type="button" class="btn btn-quiet" id="openShareBtn">공유 및 앱 설치</button>
+        <a href="./pricing.html" class="btn btn-primary" id="headerStatusCta">월 15,000원 정기구독</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent" class="home-main">
+    <section class="home-hero-band" aria-label="핵심 소개 및 무료 공개 수업 바로 열기">
+      <div class="home-hero-inner">
+        <div class="hero-copy">
+          <h1>작은교회 교사 한 분을 위한 다섯 세대 주일 수업 스튜디오</h1>
+          <p class="hero-lead">
+            한 주일의 성경 본문으로 유치부부터 청소년부, 혼합 통합반까지 설교문과 소인원 대본, 무가위 A4 활동지를 5분 안에 준비합니다.
+          </p>
+          <div class="hero-actions">
+            <a id="heroStartFreeBtn" class="btn btn-primary" href="./studio.html?week=free&amp;dept=01_kindergarten">무료 공개 수업 바로 열기</a>
+            <a class="btn btn-secondary" href="#curriculumCatalog">전체 주차 목록 보기</a>
+          </div>
+          <div class="hero-meta-row">
+            <span class="status-tag status-free">무료 공개 샘플 개방</span>
+            <span id="heroLatestMeta">최신 공개 본문을 불러오는 중입니다.</span>
+          </div>
+        </div>
+
+        <aside class="quick-studio-sheet" aria-label="무료 공개 호 부서별 즉시 탐색">
+          <div class="quick-tabs" id="quickStudioTabs" role="tablist" aria-label="부서 선택"></div>
+          <div id="quickStudioBody">
+            <div class="state-box">무료 공개 교실을 불러오는 중입니다.</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="home-section" aria-label="한 주일 본문으로 연결되는 다섯 세대 교실">
+      <div class="home-section-inner">
+        <div class="section-head">
+          <div>
+            <h2>한 주일 본문으로 연결되는 다섯 세대 교실</h2>
+            <p class="section-desc">연령대와 출석 인원(1~5명)에 맞춰 설교 호흡과 활동지 형식을 세대별로 맞춤 제공합니다.</p>
+          </div>
+          <a href="./about.html" class="btn btn-secondary">교육 방향 자세히 보기</a>
+        </div>
+        <div class="dept-tracks-grid" id="deptTracksGrid">
+          <div class="state-box">교실 목록을 불러오는 중입니다.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="curriculumCatalog" class="home-section home-section-alt" aria-label="주간 커리큘럼 목록">
+      <div class="home-section-inner">
+        <div class="section-head">
+          <div>
+            <h2>주간 커리큘럼 목록</h2>
+            <p class="section-desc">무료 체험 샘플 주차는 미구독 상태에서도 전 부서 열람과 다운로드가 열려 있습니다.</p>
+          </div>
+        </div>
+
+        <div class="catalog-toolbar">
+          <div class="filter-tab-row" role="tablist" aria-label="주차 필터">
+            <button type="button" class="filter-tab-btn" id="filterAllBtn" role="tab" aria-selected="true">전체 주차</button>
+            <button type="button" class="filter-tab-btn" id="filterFreeBtn" role="tab" aria-selected="false">무료 공개</button>
+          </div>
+          <div class="catalog-search">
+            <svg class="icon-svg catalog-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" />
+              <path d="m20 20-3.5-3.5" />
+            </svg>
+            <input id="catalogSearchInput" type="search" class="form-input catalog-search-input" placeholder="성경 본문 또는 주제 검색" aria-label="성경 본문 또는 주제 검색" />
+          </div>
+        </div>
+
+        <div class="catalog-ledger" id="catalogLedger">
+          <div class="state-box">커리큘럼을 불러오는 중입니다.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="site-footer-meta">
+        <strong>JUSTJOY 강소교회 다음세대 교육 스튜디오</strong>
+        <span>부산광역시 월드컵대로 221, 2층</span>
+        <span>문의 <a href="mailto:rlagksquf927@gmail.com">rlagksquf927@gmail.com</a></span>
+      </div>
+      <div>무료 샘플 공개 및 정기구독 다음세대 커리큘럼</div>
+    </div>
+  </footer>
+
+  <script type="module" src="./js/home.js"></script>
+</body>
+</html>

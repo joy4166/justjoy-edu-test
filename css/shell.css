@@ -1,0 +1,211 @@
+/* Hallmark · shape: app screen · genre: editorial · theme: Almanac (by request)
+ * nav: unified 4-link header and shared dialogs · signature: Almanac 1px hairline shell · states: visitor, subscriber, pastor
+ * axes: mid/grotesk-sans/chromatic-cobalt · posture: restrained · contrast: pass · v2.0.0 */
+
+.site-header {
+  background-color: var(--color-paper);
+  border-bottom: var(--rule-hair) solid var(--color-rule);
+}
+
+.site-header-inner {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding: var(--space-sm) var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  text-decoration: none;
+  color: var(--color-ink);
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  height: 24px;
+  width: auto;
+}
+
+.brand-studio-name {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-control);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-ink-2);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out);
+}
+
+.nav-link:hover {
+  background-color: var(--color-paper-2);
+  color: var(--color-ink);
+}
+
+.nav-link[aria-current="page"] {
+  background-color: var(--color-paper-active);
+  color: var(--color-accent-soft-ink);
+  font-weight: 700;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  flex-shrink: 0;
+}
+
+.site-footer {
+  margin-top: auto;
+  border-top: var(--rule-hair) solid var(--color-rule);
+  background-color: var(--color-paper);
+  padding: var(--space-md) var(--gutter);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+.site-footer-inner {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-right: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.site-footer-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+/* Semantic Inline Status Pills (never placed above headings) */
+.status-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  min-height: 26px;
+  padding: var(--space-3xs) var(--space-sm);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status-free {
+  background-color: var(--color-paper-free);
+  border: var(--rule-hair) solid var(--color-free-rule);
+  color: var(--color-free-ink);
+}
+
+.status-paid {
+  background-color: var(--color-paper-active);
+  border: var(--rule-hair) solid var(--color-accent);
+  color: var(--color-accent-soft-ink);
+}
+
+.status-muted {
+  background-color: var(--color-paper-2);
+  border: var(--rule-hair) solid var(--color-rule-2);
+  color: var(--color-ink-2);
+}
+
+.status-warn {
+  background-color: var(--color-warn-soft);
+  border: var(--rule-hair) solid var(--color-warn-rule);
+  color: var(--color-warn);
+}
+
+/* Shared Share & PWA Install Dialog Body */
+.share-url-row {
+  display: flex;
+  gap: var(--space-xs);
+  align-items: center;
+}
+
+.share-url-input {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-outlier);
+  font-size: var(--text-sm);
+}
+
+.share-actions-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+
+.pwa-guide-section {
+  padding-top: var(--space-md);
+  border-top: var(--rule-hair) solid var(--color-rule);
+}
+
+.pwa-guide-section h2 {
+  font-size: var(--text-md);
+  margin-bottom: var(--space-xs);
+}
+
+.pwa-guide-list {
+  margin: var(--space-xs) 0 0;
+  padding-left: var(--space-md);
+  font-size: var(--text-sm);
+  color: var(--color-ink-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+@media (max-width: 60rem) {
+  .site-footer-inner {
+    padding-right: 0;
+  }
+
+  .site-header-inner {
+    gap: var(--space-sm);
+  }
+
+  .brand-studio-name {
+    display: none;
+  }
+
+  .site-nav {
+    order: 3;
+    width: 100%;
+    padding-top: var(--space-xs);
+    border-top: var(--rule-hair) solid var(--color-rule);
+    overflow-x: auto;
+  }
+
+  .nav-link {
+    padding: var(--space-2xs) var(--space-xs);
+  }
+}

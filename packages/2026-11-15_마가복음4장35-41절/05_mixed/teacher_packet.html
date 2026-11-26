@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>작은교회 혼합 통합반 교사 패킷 — 마가복음 4:35~41</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 12mm;
+    }
+
+    :root {
+      --navy: #1B365D;
+      --ink: #223042;
+      --muted: #52657A;
+      --bg: #F3F5F8;
+      --surface: #FFFFFF;
+      --sand: #FAF6EE;
+      --sand-border: #DDD2C0;
+      --kid: #1E82A4;
+      --kid-soft: #EFF8FB;
+      --kid-border: #B3D9E7;
+      --elem: #C86D2D;
+      --elem-soft: #FDF7F0;
+      --elem-border: #E8C9A9;
+      --coop: #258564;
+      --coop-soft: #EFF9F4;
+      --coop-border: #B2DCCB;
+      --line: #D4DEE8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "Nanum Gothic", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.62;
+      word-break: keep-all;
+      font-size: 15.5px;
+    }
+
+    /* Screen Sticky Toolbar */
+    .screen-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: var(--navy);
+      color: #F8FAFC;
+      padding: 10px 16px;
+      box-shadow: 0 4px 16px rgba(27, 54, 93, 0.18);
+    }
+
+    .toolbar-inner {
+      max-width: 840px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .toolbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 0.92rem;
+      color: #FDE68A;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .nav-btn {
+      display: inline-block;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.14);
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 6px 11px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .nav-btn:hover {
+      background: rgba(255, 255, 255, 0.24);
+    }
+
+    .print-btn {
+      background: #E6A138;
+      color: #1B2838;
+      border: none;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .print-btn:hover {
+      background: #F0B351;
+    }
+
+    .packet-wrap {
+      max-width: 840px;
+      margin: 18px auto 36px;
+      padding: 0 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .sheet-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 24px 26px;
+      box-shadow: 0 6px 24px rgba(27, 54, 93, 0.06);
+    }
+
+    /* Packet Cover Header */
+    .packet-header {
+      border-bottom: 2px solid var(--navy);
+      padding-bottom: 14px;
+      margin-bottom: 16px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: #E2F0F4;
+      color: #165B73;
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 99px;
+      margin-bottom: 6px;
+    }
+
+    .packet-header h1 {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--navy);
+      letter-spacing: -0.4px;
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+
+    .meta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-size: 0.86rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .gospel-callout {
+      background: var(--sand);
+      border: 1px solid var(--sand-border);
+      border-left: 4px solid #C78A24;
+      border-radius: 10px;
+      padding: 12px 15px;
+      margin-bottom: 18px;
+    }
+
+    .gospel-callout .label {
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: #9A6612;
+      margin-bottom: 3px;
+    }
+
+    .gospel-callout p {
+      font-size: 0.96rem;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.48;
+    }
+
+    /* Section Headings */
+    .part-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      background: var(--navy);
+      color: #FFFFFF;
+      padding: 10px 15px;
+      border-radius: 10px;
+      margin-bottom: 16px;
+    }
+
+    .part-banner .part-tag {
+      background: #E6A138;
+      color: #1B2838;
+      font-size: 0.78rem;
+      font-weight: 900;
+      padding: 2px 9px;
+      border-radius: 6px;
+      margin-right: 8px;
+    }
+
+    .part-banner h2 {
+      font-size: 1.12rem;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .part-banner .part-sub {
+      font-size: 0.8rem;
+      color: #CBD5E1;
+      font-weight: 600;
+    }
+
+    .guide-block {
+      margin-bottom: 18px;
+    }
+
+    .guide-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .guide-h3 {
+      font-size: 1.02rem;
+      font-weight: 900;
+      color: var(--navy);
+      margin-bottom: 8px;
+      padding-left: 9px;
+      border-left: 3.5px solid var(--kid);
+    }
+
+    table.info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 8px 0 10px;
+      font-size: 0.88rem;
+    }
+
+    table.info-table th,
+    table.info-table td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.45;
+    }
+
+    table.info-table th {
+      background: #F4F7FA;
+      color: var(--navy);
+      font-weight: 800;
+    }
+
+    .tip-note {
+      background: #F8FAFC;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 9px 12px;
+      font-size: 0.87rem;
+      color: var(--ink);
+    }
+
+    .zone-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .zone-box {
+      border-radius: 10px;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      background: #FAFBFD;
+      font-size: 0.88rem;
+    }
+
+    .zone-box h4 {
+      font-size: 0.94rem;
+      font-weight: 900;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .zone-box ul {
+      padding-left: 17px;
+    }
+
+    .zone-box li {
+      margin-bottom: 4px;
+    }
+
+    .answer-key {
+      margin-top: 10px;
+      background: var(--elem-soft);
+      border: 1px solid var(--elem-border);
+      border-radius: 9px;
+      padding: 10px 13px;
+      font-size: 0.87rem;
+    }
+
+    .answer-key strong {
+      color: #9A4915;
+    }
+
+    .webapp-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 8px 0;
+    }
+
+    .step-card {
+      border-radius: 10px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      font-size: 0.85rem;
+    }
+
+    .step-card.k { background: var(--kid-soft); border-color: var(--kid-border); }
+    .step-card.e { background: var(--elem-soft); border-color: var(--elem-border); }
+    .step-card.c { background: var(--coop-soft); border-color: var(--coop-border); }
+
+    .step-card .st-head {
+      font-weight: 900;
+      font-size: 0.88rem;
+      margin-bottom: 4px;
+      color: var(--navy);
+    }
+
+    /* Part 2: Sermon Script */
+    .sermon-section-page {
+      page-break-before: always;
+      break-before: page;
+    }
+
+    .sermon-title-box {
+      border-bottom: 1.5px solid var(--line);
+      padding-bottom: 10px;
+      margin-bottom: 14px;
+    }
+
+    .sermon-title-box h3 {
+      font-size: 1.28rem;
+      font-weight: 900;
+      color: var(--navy);
+      letter-spacing: -0.3px;
+    }
+
+    .sermon-title-box p {
+      font-size: 0.86rem;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+
+    .sermon-stage {
+      margin-bottom: 18px;
+    }
+
+    .stage-label {
+      display: inline-block;
+      background: #EEF2F7;
+      color: var(--navy);
+      border: 1px solid #CBD6E2;
+      font-size: 0.84rem;
+      font-weight: 900;
+      padding: 3px 10px;
+      border-radius: 7px;
+      margin-bottom: 10px;
+    }
+
+    .sermon-beat {
+      margin-bottom: 12px;
+      padding-left: 12px;
+      border-left: 3px solid #E2E8F0;
+    }
+
+    .sermon-beat.beat-kid {
+      border-left-color: var(--kid);
+      background: #FAFDFF;
+      padding: 8px 12px;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .sermon-beat.beat-elem {
+      border-left-color: var(--elem);
+      background: #FFFCF8;
+      padding: 8px 12px;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .sermon-beat.beat-action {
+      border-left-color: var(--coop);
+      background: #F8FCFA;
+      padding: 8px 12px;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .cue-pill {
+      display: inline-block;
+      font-size: 0.77rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 6px;
+      margin-bottom: 5px;
+      color: var(--navy);
+      background: #E9EFF6;
+    }
+
+    .beat-kid .cue-pill    { background: #DDF0F7; color: #125870; }
+    .beat-elem .cue-pill   { background: #FBE9DA; color: #9A4915; }
+    .beat-action .cue-pill { background: #DCF2E8; color: #175C44; }
+
+    .spoken {
+      font-size: 1.03rem;
+      line-height: 1.75;
+      color: #162333;
+      font-weight: 500;
+    }
+
+    .chant-highlight {
+      font-weight: 900;
+      color: var(--navy);
+      background: #FEF3C7;
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 680px) {
+      .sheet-card { padding: 16px 15px; }
+      .zone-grid, .webapp-steps { grid-template-columns: 1fr; }
+      .packet-header h1 { font-size: 1.28rem; }
+      .spoken { font-size: 1.02rem; line-height: 1.72; }
+    }
+
+    @media print {
+      .screen-toolbar { display: none !important; }
+      body { background: #FFFFFF !important; font-size: 10.2pt; line-height: 1.5; }
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      .packet-wrap { max-width: 100%; margin: 0; padding: 0; gap: 0; }
+      .sheet-card {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        border-radius: 0;
+      }
+      .sermon-section-page {
+        page-break-before: always;
+        break-before: page;
+        padding-top: 2mm;
+      }
+      .spoken { font-size: 10.6pt; line-height: 1.65; }
+      .sermon-beat { break-inside: avoid; page-break-inside: avoid; }
+      .guide-block { break-inside: avoid; page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="screen-toolbar">
+    <div class="toolbar-brand">혼합 통합반 교사 패킷 · 마가복음 4:35~41</div>
+    <div class="toolbar-actions">
+      <a href="#part1" class="nav-btn">Part 1 · 교보재 안내서</a>
+      <a href="#part2" class="nav-btn">Part 2 · 설교문 완본</a>
+      <button type="button" class="print-btn" onclick="window.print()">A4 인쇄하기</button>
+    </div>
+  </div>
+
+  <main class="packet-wrap">
+    <!-- ==================== PART 1: 교보재·웹앱 사용 안내서 ==================== -->
+    <section class="sheet-card" id="part1">
+      <header class="packet-header">
+        <span class="eyebrow">2026-11-15 · 작은교회 혼합 통합반 (유치 5~7세 + 초등 8~13세, 1~5명, 교사 1인)</span>
+        <h1>혼합 통합반 교사용 패킷 (교보재 안내서 + 설교문 완본)</h1>
+        <div class="meta-row">
+          <span>성경 본문: 마가복음 4:35~41 (참고: 시편 89:9)</span>
+          <span>설교 7~8분 + 활동 35분</span>
+          <span>연동 자료: teaching_aid.html · mixed.html</span>
+        </div>
+      </header>
+
+      <div class="gospel-callout">
+        <div class="label">이번 주 핵심 복음 한 문장 (One Gospel)</div>
+        <p>"신자라도 삶의 거센 폭풍을 피할 수는 없지만, 바람과 바다를 말씀으로 다스리시는 창조주 예수님이 지금 우리와 같은 배에 타고 계시기에 우리는 두려움 대신 참된 평안과 경외를 배운다."</p>
+      </div>
+
+      <div class="part-banner">
+        <h2><span class="part-tag">PART 1</span>혼합 통합반 교보재·웹앱 사용 안내서</h2>
+        <span class="part-sub">Zero-Prep 5분 세팅 &amp; 멀티레벨 운영 가이드</span>
+      </div>
+
+      <div class="guide-block">
+        <h3 class="guide-h3">1. 인쇄 매수 및 A4 출력 설정 (가위질 없는 No-Cut)</h3>
+        <table class="info-table">
+          <thead>
+            <tr>
+              <th style="width:26%;">구분</th>
+              <th style="width:28%;">필요 인쇄 매수</th>
+              <th>현장 활용 방법</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1면 (1페이지)</strong><br>공용 항해 보드판</td>
+              <td>인원수 상관없이<br><strong>테이블당 딱 1장</strong></td>
+              <td>테이블 중앙에 펼쳐 놓고 교사와 동생·형·누나가 단 하나의 배를 함께 움직입니다.</td>
+            </tr>
+            <tr>
+              <td><strong>2면 (2페이지)</strong><br>동생·초등·가족 시트</td>
+              <td><strong>참여 아이 수 + 교사 1장</strong><br><span style="color:var(--muted); font-size:0.86em;">(예: 아이 3명이면 4장)</span></td>
+              <td>위쪽은 동생 카드, 아래쪽은 초등 관찰 시트·가정 나눔 카드로 각자 1장씩 사용합니다.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="tip-note">
+          <strong>인쇄 팁:</strong> <code>teaching_aid.html</code>을 Chrome에서 열고 우측 상단 <strong>[A4 2페이지 인쇄하기]</strong> 클릭 → 용지 <strong>A4</strong>, 배율 <strong>100%</strong>, <strong>배경 그래픽 체크</strong>, <strong>머리글/바닥글 해제</strong>로 출력하세요.
+        </div>
+      </div>
+
+      <div class="guide-block">
+        <h3 class="guide-h3">2. 준비물 &amp; 현장 100% 대체법 (말 1개 · 주사위 · 가위바위보)</h3>
+        <table class="info-table">
+          <thead>
+            <tr>
+              <th style="width:28%;">기본 준비물</th>
+              <th>없을 때 바로 쓰는 대체품</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>보드게임 말 딱 1개</strong></td>
+              <td>100원짜리 <strong>동전</strong>, <strong>지우개</strong>, 생수 <strong>병뚜껑</strong>, 접은 <strong>포스트잇</strong> 중 아무거나 1개 (모두가 한 배에 타므로 말은 1개만 씁니다)</td>
+            </tr>
+            <tr>
+              <td><strong>주사위 1개</strong></td>
+              <td>• <strong>웹앱 디지털 주사위</strong>: 태블릿에서 <code>06_webapps/mixed.html</code> 주사위 버튼 터치<br>• <strong>무전원 가위바위보 규칙</strong>: 교사와 가위바위보 하여 <strong>이기면 3칸 / 비기면 2칸 / 져도 1칸</strong> 이동 (탈락·후퇴 없음)</td>
+            </tr>
+            <tr>
+              <td><strong>색연필 · 성경책</strong></td>
+              <td>색연필이 없으면 연필/볼펜으로 동그라미·빗금을 쳐도 좋고, 성경책이 부족하면 교사 성경 1권을 가운데 펼쳐 봅니다.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="guide-block">
+        <h3 class="guide-h3">3. 1면 공용 보드판 &amp; 2면 맞춤 시트 구역별 사용법</h3>
+        <div class="zone-grid">
+          <div class="zone-box">
+            <h4>1면 · 공용 No-Cut 항해 보드판</h4>
+            <ul>
+              <li><strong>S자 3×3 항로</strong>: 출발 → 1·2칸 → 3·4·5칸 → 6·7칸 → 8칸 항구</li>
+              <li><strong>동생 칸 (1·4·6칸)</strong>: 동생이 앞장서 동작·색칠, 형·누나는 박자·효과음 응원</li>
+              <li><strong>초등 칸 (2·5·7칸)</strong>: 초등이 성경(막 4:37~41, 시 89:9)을 찾아 동생에게 1문장으로 설명</li>
+              <li><strong>합동 칸 (출발·3·8칸)</strong>: 모두 손잡고 구호 합창, 하단 <strong>잔잔함 별 5개</strong> 색칠</li>
+            </ul>
+          </div>
+          <div class="zone-box">
+            <h4>2면 · 자르지 않는 이중 맞춤 시트</h4>
+            <ul>
+              <li><strong>상단 (유치 동생)</strong>: 4컷 동작 카드 중 마음에 드는 그림과 <em>"예수님, 내 배에 함께 계세요!"</em> 글자 테두리 색칠</li>
+              <li><strong>하단 좌측 (초등 형·누나)</strong>: 성경 관찰 <strong>빈칸 6개</strong> 채운 뒤 바로 아래 <strong>'✍ 내 배 안의 고백'</strong>에 걱정 1가지와 기도 적기</li>
+              <li><strong>하단 우측 (온 가족 나눔)</strong>: 가정 식탁에서 나눌 대화 2가지, 주중 체크 3칸, 축복 기도문 안내</li>
+            </ul>
+          </div>
+        </div>
+        <div class="answer-key">
+          <strong>교사용 빈칸 6개 정답 치트키:</strong>
+          단서 1(막 4:37) ① <strong>라일랍스</strong>(ㄹㅇㄹㅅ) ·
+          단서 2(막 4:39) ② <strong>고요하라</strong>, ③ <strong>갈레네</strong>(ㄱㄹㄴ) ·
+          단서 3(시 89:9/막 4:41) ④ <strong>파도</strong>, ⑤ <strong>잔잔</strong>, ⑥ <strong>창조주</strong>(ㅊㅈㅈ)
+        </div>
+      </div>
+
+      <div class="guide-block">
+        <h3 class="guide-h3">4. 태블릿 웹앱(<code>06_webapps/mixed.html</code>) 교대 진행 &amp; 무전원 대체</h3>
+        <div class="webapp-steps">
+          <div class="step-card k">
+            <div class="st-head">① 동생 존 먼저 터치</div>
+            <div>주황색 구역에서 큰 주사위를 굴리고 동작을 따라 한 뒤 <strong>[동생 동작 미션 완료]</strong> 터치</div>
+          </div>
+          <div class="step-card e">
+            <div class="st-head">② 형·누나 존 교대 터치</div>
+            <div>파란색 구역에서 본문 퀴즈를 풀고 노란 박스 문장을 동생에게 설명해 준 뒤 <strong>[완료]</strong> 터치</div>
+          </div>
+          <div class="step-card c">
+            <div class="st-head">③ 함께 출항 버튼 누르기</div>
+            <div>두 미션이 끝나면 초록색 <strong>[함께 출항]</strong> 버튼 활성화! 상단 <code>⇅ 상/하·좌/우 전환</code> 버튼으로 자리 맞춤</div>
+          </div>
+        </div>
+        <div class="tip-note">
+          <strong>무전원 대체:</strong> 태블릿이나 전기가 없는 공간에서는 종이 보드판(1면) + 2면 시트 + 가위바위보 이동 규칙만으로 동일한 5단계 항해를 100% 진행할 수 있습니다.
+        </div>
+      </div>
+
+      <div class="guide-block">
+        <h3 class="guide-h3">5. 연령 조합·인원수별 테이블 운용 팁</h3>
+        <table class="info-table">
+          <tbody>
+            <tr>
+              <td style="width:28%;"><strong>유치 1 + 초등 1~2명</strong><br><span style="color:var(--muted); font-size:0.86em;">(2~3명 조합)</span></td>
+              <td>말 1개를 두고 주사위만 <code>동생 → 초등1 → 초등2</code> 순서로 돌립니다. 친형제끼리 타박하면 <em>"형은 말씀 탐정, 동생은 그림 항해사야. 각자 임무로 배를 돕자"</em>고 역할을 분리해 주세요.</td>
+            </tr>
+            <tr>
+              <td><strong>유치 2 + 초등 2~3명</strong><br><span style="color:var(--muted); font-size:0.86em;">(4~5명 조합)</span></td>
+              <td>동생-초등 <strong>1:1 또는 1:2 버디(짝꿍)</strong>로 나란히 앉힙니다. 동생 칸은 두 동생이 동작·색칠을 나누고, 초등 칸은 초등 아이들이 구절을 1절씩 나누어 읽습니다.</td>
+            </tr>
+            <tr>
+              <td><strong>유치만 왔을 때 / 초등만 왔을 때</strong></td>
+              <td><strong>유치만(1명 포함):</strong> 교사가 형·누나 역할을 맡아 초등 칸을 1문장 힌트로 짧게 넘깁니다.<br><strong>초등만(1명 포함):</strong> 동생 동작은 교사가 3초 시범으로 가볍게 넘기고, 원어 단서와 <code>✍ 내 배 안의 고백</code> 대화를 깊이 나눕니다.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ==================== PART 2: 통합반 7~8분 설교문 완본 ==================== -->
+    <section class="sheet-card sermon-section-page" id="part2">
+      <div class="part-banner">
+        <h2><span class="part-tag">PART 2</span>혼합 통합반 7~8분 설교문 완본 (테이블 낭독용)</h2>
+        <span class="part-sub">유치 동생 동작 구호 ↔ 초등 단서 질문 교차형</span>
+      </div>
+
+      <div class="sermon-title-box">
+        <h3>한 배에 타신 예수님이 바람과 바다보다 크셔요</h3>
+        <p>성경 본문: 마가복음 4:35~41 · 예상 소요: 7~8분 (연출 지시어 제외 순수 발화 2,001자)</p>
+      </div>
+
+      <!-- 도입 -->
+      <div class="sermon-stage">
+        <span class="stage-label">1. 도입 — 동생과 초등이 함께 공감하는 두려움의 순간</span>
+
+        <div class="sermon-beat">
+          <span class="cue-pill">[표정: 테이블 아이들과 한 명씩 눈을 맞추며 다정하게]</span>
+          <p class="spoken">오늘 동생도 있고, 형·누나도 있고, 선생님도 이렇게 한 테이블에 둘러앉았네요. 지금 이 테이블을 갈릴리 호수를 건너는 작은 배라고 상상해 볼까요?</p>
+        </div>
+
+        <div class="sermon-beat beat-kid">
+          <span class="cue-pill">[동생 질문]</span>
+          <p class="spoken">먼저 동생들에게 물어볼게요. 밤에 불이 꺼져 깜깜할 때나 천둥소리가 들릴 때 마음이 어땠나요? 가슴이 두근두근, 콩콩 뛰지요.</p>
+        </div>
+
+        <div class="sermon-beat beat-elem">
+          <span class="cue-pill">[초등 공감 질문]</span>
+          <p class="spoken">형과 누나는 어때요? 열심히 준비했는데도 발표 앞에서 머리가 하얘지거나, 친구와 오해가 생겨 마음이 막막할 때가 있지요. 내 힘으로 막을 수 없는 일이 갑자기 밀려오는 순간이에요.</p>
+        </div>
+
+        <div class="sermon-beat beat-action">
+          <span class="cue-pill">[동작: 두 팔을 좌우로 크게 흔들며]</span>
+          <p class="spoken">그 마음을 몸으로 표현해 봅시다. 형과 누나도 동생들과 박자를 맞춰 외쳐 주세요. <span class="chant-highlight">"바람이 쌩쌩! 마음이 콩콩!"</span></p>
+        </div>
+
+        <div class="sermon-beat">
+          <p class="spoken">마음에 거센 바람이 불면 이런 생각이 들기 쉬워요. "내가 잘못해서 이런 일이 왔나? 예수님 믿으면 무서운 일은 안 와야 하는 거 아닌가?" 오늘 마가복음 4장 35절부터 41절은 전혀 다른 장면을 보여 줍니다.</p>
+        </div>
+      </div>
+
+      <!-- 본문 해부 -->
+      <div class="sermon-stage">
+        <span class="stage-label">2. 본문 해부 — 순종해 탄 배에 몰아친 라일랍스와 주무시는 예수님</span>
+
+        <div class="sermon-beat">
+          <span class="cue-pill">[교구: 성경 본문을 손가락으로 짚으며]</span>
+          <p class="spoken">예수님이 호숫가에서 가르치신 뒤 해가 저물자, 제자들에게 먼저 "우리가 저편으로 건너가자" 하셨어요. 제자들은 말씀에 순종해 예수님을 배에 모시고 출발했어요.</p>
+        </div>
+
+        <div class="sermon-beat beat-elem">
+          <span class="cue-pill">[초등 단서: 원어 한 스푼]</span>
+          <p class="spoken">형과 누나에게 들려주는 성경 힌트예요. 제자들이 탄 배는 헬라어로 '플로이온'인데, 위가 트인 여덟 미터 남짓한 작은 어선이에요. 그런데 순종해 떠난 그 배에 갑자기 큰 광풍이 닥쳤어요. 원어로 '라일랍스'라고 해요. 갈릴리 호수가 낮은 분지여서, 차가운 산바람이 협곡을 타고 예고 없이 내리꽂히는 돌풍이에요.</p>
+        </div>
+
+        <div class="sermon-beat beat-kid">
+          <span class="cue-pill">[동작: 양손으로 출렁이는 파도 모양을 만들며]</span>
+          <p class="spoken">동생들, 작은 배 안에 물이 가득 들어오고 있어요. 다 같이 파도 동작을 해 봅시다. <span class="chant-highlight">"파도가 철썩! 물이 출렁!"</span></p>
+        </div>
+
+        <div class="sermon-beat beat-elem">
+          <span class="cue-pill">[초등 질문: 대답을 잠깐 기다린 뒤 이어가기]</span>
+          <p class="spoken">초등 탐정들에게 물어볼게요. 배에 탄 베드로와 안드레는 초보였을까요, 평생 물고기 잡던 베테랑 어부였을까요? 맞아요, 갈릴리를 누구보다 잘 아는 전문가들이었어요. 그런데도 어쩔 줄 모르고 겁이 났어요.</p>
+        </div>
+
+        <div class="sermon-beat">
+          <p class="spoken">더 의외인 모습은 예수님이에요. 배 뒤편 고물에서 베개를 베고 주무시고 계셨어요. 제자들이 급히 깨우며 외쳤어요. "선생님, 우리가 죽게 된 것을 돌보지 않으시나요?"</p>
+        </div>
+
+        <div class="sermon-beat">
+          <p class="spoken">잠에서 깬 예수님은 제자들을 야단치지 않으셨어요. 39절을 보면, 예수님은 바람을 꾸짖으시고 바다에 말씀하셨어요. "잠잠하라, 고요하라!"</p>
+        </div>
+
+        <div class="sermon-beat beat-action">
+          <span class="cue-pill">[동작: 검지 손가락을 입술에 대고 동작을 딱 멈추며]</span>
+          <p class="spoken">우리 모두 입에 손가락을 대고 딱 멈춰 봅시다. 하나, 둘, 셋! <span class="chant-highlight">"예수님 쉿! 파도야 멈춰!"</span></p>
+        </div>
+
+        <div class="sermon-beat beat-elem">
+          <span class="cue-pill">[초등 단서: 원어 한 스푼]</span>
+          <p class="spoken">형과 누나, '꾸짖으셨다'는 말은 예수님이 귀신을 쫓아내실 때 쓰신 절대 명령이에요. 멈춘 바다 상태는 헬라어로 '갈레네'라고 해요. 바람이 그친 뒤 남는 출렁거림조차 없이 유리판처럼 고요해졌다는 뜻이에요.</p>
+        </div>
+      </div>
+
+      <!-- 복음의 반전 -->
+      <div class="sermon-stage">
+        <span class="stage-label">3. 복음의 반전 — 폭풍이 없어서가 아니라, 창조주가 같은 배에 계시기에</span>
+
+        <div class="sermon-beat">
+          <p class="spoken">바다가 잠잠해진 뒤에야 예수님이 제자들에게 물으셨어요. "어찌하여 이렇게 무서워하느냐, 너희가 아직도 믿음이 없느냐?"</p>
+        </div>
+
+        <div class="sermon-beat">
+          <p class="spoken">이 순서를 기억하세요. 예수님은 겁냈다고 벌주시려는 게 아니에요. 먼저 바람을 멈춰 제자들을 살려 주신 뒤 물으셨어요. "내 곁에서 많은 일을 보고도, 지금 배 안에 누가 타고 있는지 아직도 모르겠니?" 하고 일깨워 주신 거예요.</p>
+        </div>
+
+        <div class="sermon-beat beat-elem">
+          <span class="cue-pill">[초등 단서 질문]</span>
+          <p class="spoken">41절에서 제자들이 놀라 서로 물어요. "그가 누구이기에 바람과 바다도 순종하는가!" 형, 누나! 시편 89편 9절에는 거친 파도를 다스리고 잔잔하게 하시는 분이 누구라 했나요? 맞아요, 오직 창조주 하나님뿐이에요. 지금 배에 타신 예수님이 바로 창조주 하나님이시라는 고백이에요.</p>
+        </div>
+
+        <div class="sermon-beat">
+          <p class="spoken">동생들도, 형과 누나도 이것만은 기억해요. 우리가 안심하는 이유는 예수님을 믿으면 바람이 안 불거나, 기도하면 어려운 일이 마법처럼 사라지기 때문이 아니에요. 내가 용감해서 버티는 것도 아니에요. 바람과 바다보다 크신 창조주 예수님이 지금 나와 같은 배에 계시기 때문이에요. 예수님은 훗날 십자가에서 죄와 죽음이라는 가장 큰 폭풍까지 이기시고 우리에게 참 평안을 주셨어요.</p>
+        </div>
+      </div>
+
+      <!-- 오늘의 순종 -->
+      <div class="sermon-stage" style="margin-bottom:0;">
+        <span class="stage-label">4. 오늘의 순종 — 한 테이블 같은 배에서 서로를 위해 기도하기</span>
+
+        <div class="sermon-beat">
+          <p class="spoken">이번 주에도 밤이 깜깜해 무섭거나 학교와 친구 일로 마음이 흔들릴 수 있어요. 그때 혼자 숨거나 센 척하지 말고 배 안의 예수님을 부르세요. 동생은 두 손을 모아 주님을 부르고, 형과 누나는 내 힘으로 쥐고 있던 걱정을 맡기며 동생의 손을 잡아주고 함께 기도해 주세요.</p>
+        </div>
+
+        <div class="sermon-beat beat-action" style="margin-bottom:0;">
+          <span class="cue-pill">[동작: 옆 사람과 손을 잡거나 두 손을 가슴에 모으며]</span>
+          <p class="spoken">한 배에 탄 가족이 되어 마지막 고백을 함께 외치고 기도합시다. <span class="chant-highlight">"바람보다 크신 예수님, 내 배에 함께 계세요!"</span> 아멘.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,319 @@
+{
+  "updated_at": "2026-11-25T11:48:23.000140",
+  "packages": [
+    {
+      "pack_id": "2026-11-22_창세기1장1절-2장3절_천지창조",
+      "week_date": "2026-11-22",
+      "scripture": "창세기 1:1~2:3",
+      "title": "말씀으로 세상을 지으시고, 나를 ‘심히 좋게’ 빚으신 하나님",
+      "core_gospel": "우연이나 노예가 아닌 ‘하나님의 형상’으로 심히 좋게 지음받은 존재 — 말씀이신 예수 그리스도 안에서 회복되는 새 창조와 참 안식",
+      "status": "approved",
+      "is_free_sample": false,
+      "approved_at": "2026-11-25 11:48",
+      "reviewer_note": "신학·교수법 사전 검수 및 5개 부서 다형식(형식 B + 선택 형식 A) 최종 승인 완료",
+      "hero_image": "assets/thumbs/2026-11-22-hero.jpg",
+      "full_zip_url": "downloads/2026-11-22_창세기1장1절-2장3절_천지창조/2026-11-22_창세기1장1절-2장3절_천지창조_전부서_통합패키지.zip",
+      "launcher_url": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/06_webapps/index.html",
+      "format_summary": "형식 B 주력 + 선택 형식 A 동시 수록",
+      "departments": [
+        {
+          "id": "01_kindergarten",
+          "code": "01",
+          "name": "유치부",
+          "age": "4~7세",
+          "sermon_target": "5~7분",
+          "lesson_minutes": 35,
+          "aid_pdf_pages": 2,
+          "packet_pdf_pages": 7,
+          "aid_format_badge": "형식 B · 반접기 창조 그림책 & 짝꿍 선잇기",
+          "has_alt_aid": true,
+          "alt_aid_badge": "형식 A · 컬러링 도안 & TPR 율동카드",
+          "sermon_title": "말씀으로 만드시고, 나를 참 좋게 만드신 하나님",
+          "thumb_image": "assets/thumbs/2026-11-22-01_kindergarten.jpg",
+          "preview_urls": {
+            "teaching_aid_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/01_kindergarten/teaching_aid.html",
+            "teacher_packet_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/01_kindergarten/teacher_packet.html",
+            "webapp_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/06_webapps/kindergarten.html"
+          },
+          "download_urls": {
+            "aid_pdf": "downloads/2026-11-22_창세기1장1절-2장3절_천지창조/01_유치부_A4교보재_2면.pdf",
+            "packet_pdf": "downloads/2026-11-22_창세기1장1절-2장3절_천지창조/01_유치부_교사패킷_안내서와설교문.pdf",
+            "aid_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/01_kindergarten/teaching_aid.html",
+            "packet_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/01_kindergarten/teacher_packet.html",
+            "webapp_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/06_webapps/kindergarten.html",
+            "dept_zip": "downloads/2026-11-22_창세기1장1절-2장3절_천지창조/01_유치부_올인원패키지.zip"
+          }
+        },
+        {
+          "id": "02_elem_lower",
+          "code": "02",
+          "name": "초등1부",
+          "age": "초등 1~3학년",
+          "sermon_target": "7분",
+          "lesson_minutes": 35,
+          "aid_pdf_pages": 2,
+          "packet_pdf_pages": 6,
+          "aid_format_badge": "형식 B · 6일 대칭 매칭 도감 & 4컷 만화북",
+          "has_alt_aid": true,
+          "alt_aid_badge": "형식 A · 12칸 무경쟁 협동 보드게임",
+          "sermon_title": "말씀으로 세상을 지으시고, 나를 ‘심히 좋게’ 빚으신 하나님",
+          "thumb_image": "assets/thumbs/2026-11-22-02_elem_lower.jpg",
+          "preview_urls": {
+            "teaching_aid_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/02_elem_lower/teaching_aid.html",
+            "teacher_packet_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/02_elem_lower/teacher_packet.html",
+            "webapp_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/06_webapps/elem_lower.html"
+          },
+          "download_urls": {
+            "aid_pdf": "downloads/2026-11-22_창세기1장1절-2장3절_천지창조/02_초등1부_A4교보재_2면.pdf",
+            "packet_pdf": "downloads/2026-11-22_창세기1장1절-2장3절_천지창조/02_초등1부_교사패킷_안내서와설교문.pdf",
+            "aid_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/02_elem_lower/teaching_aid.html",
+            "packet_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/02_elem_lower/teacher_packet.html",
+            "webapp_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/06_webapps/elem_lower.html",
+            "dept_zip": "downloads/2026-11-22_창세기1장1절-2장3절_천지창조/02_초등1부_올인원패키지.zip"
+          }
+        },
+        {
+          "id": "03_elem_upper",
+          "code": "03",
+          "name": "초등2부",
+          "age": "초등 4~6학년",
+          "sermon_target": "10분",
+          "lesson_minutes": 40,
+          "aid_pdf_pages": 2,
+          "packet_pdf_pages": 5,
+          "aid_format_badge": "형식 B · 세계관 대조 인포그래픽 & 필드 리포트",
+          "has_alt_aid": true,
+          "alt_aid_badge": "형식 A · 현장 과학 브리핑 & 수사노트",
+          "sermon_title": "우연도 노예도 아닌, 심히 좋게 빚으신 하나님의 형상",
+          "thumb_image": "assets/thumbs/2026-11-22-03_elem_upper.jpg",
+          "preview_urls": {
+            "teaching_aid_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/03_elem_upper/teaching_aid.html",
+            "teacher_packet_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/03_elem_upper/teacher_packet.html",
+            "webapp_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/06_webapps/elem_upper.html"
+          },
+          "download_urls": {
+            "aid_pdf": "downloads/2026-11-22_창세기1장1절-2장3절_천지창조/03_초등2부_A4교보재_2면.pdf",
+            "packet_pdf": "downloads/2026-11-22_창세기1장1절-2장3절_천지창조/03_초등2부_교사패킷_안내서와설교문.pdf",
+            "aid_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/03_elem_upper/teaching_aid.html",
+            "packet_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/03_elem_upper/teacher_packet.html",
+            "webapp_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/06_webapps/elem_upper.html",
+            "dept_zip": "downloads/2026-11-22_창세기1장1절-2장3절_천지창조/03_초등2부_올인원패키지.zip"
+          }
+        },
+        {
+          "id": "04_youth",
+          "code": "04",
+          "name": "청소년부",
+          "age": "중·고등학생",
+          "sermon_target": "10~15분",
+          "lesson_minutes": 35,
+          "aid_pdf_pages": 2,
+          "packet_pdf_pages": 5,
+          "aid_format_badge": "형식 B · 인디 매거진 스펙트럼 진 & 리프레이밍 저널",
+          "has_alt_aid": true,
+          "alt_aid_badge": "형식 A · 가치관 나눔카드 8종 & 성찰저널",
+          "sermon_title": "등급표 너머, 나를 ‘심히 좋게’ 부르시는 창조주의 음성",
+          "thumb_image": "assets/thumbs/2026-11-22-04_youth.jpg",
+          "preview_urls": {
+            "teaching_aid_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/04_youth/teaching_aid.html",
+            "teacher_packet_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/04_youth/teacher_packet.html",
+            "webapp_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/06_webapps/youth.html"
+          },
+          "download_urls": {
+            "aid_pdf": "downloads/2026-11-22_창세기1장1절-2장3절_천지창조/04_청소년부_A4교보재_2면.pdf",
+            "packet_pdf": "downloads/2026-11-22_창세기1장1절-2장3절_천지창조/04_청소년부_교사패킷_안내서와설교문.pdf",
+            "aid_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/04_youth/teaching_aid.html",
+            "packet_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/04_youth/teacher_packet.html",
+            "webapp_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/06_webapps/youth.html",
+            "dept_zip": "downloads/2026-11-22_창세기1장1절-2장3절_천지창조/04_청소년부_올인원패키지.zip"
+          }
+        },
+        {
+          "id": "05_mixed",
+          "code": "05",
+          "name": "혼합 통합반",
+          "age": "유치~초등 통합 (1~5명 · 교사 1인)",
+          "sermon_target": "7~8분",
+          "lesson_minutes": 35,
+          "aid_pdf_pages": 2,
+          "packet_pdf_pages": 4,
+          "aid_format_badge": "형식 B · 패밀리 창조 정원 매트 & 서로 축복 액자",
+          "has_alt_aid": true,
+          "alt_aid_badge": "형식 A · 다연령 한 팀 협동 트랙보드",
+          "sermon_title": "말씀으로 세상을 지으시고, 나를 ‘참 좋게’ 빚으신 하나님",
+          "thumb_image": "assets/thumbs/2026-11-22-05_mixed.jpg",
+          "preview_urls": {
+            "teaching_aid_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/05_mixed/teaching_aid.html",
+            "teacher_packet_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/05_mixed/teacher_packet.html",
+            "webapp_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/06_webapps/mixed.html"
+          },
+          "download_urls": {
+            "aid_pdf": "downloads/2026-11-22_창세기1장1절-2장3절_천지창조/05_혼합 통합반_A4교보재_2면.pdf",
+            "packet_pdf": "downloads/2026-11-22_창세기1장1절-2장3절_천지창조/05_혼합 통합반_교사패킷_안내서와설교문.pdf",
+            "aid_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/05_mixed/teaching_aid.html",
+            "packet_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/05_mixed/teacher_packet.html",
+            "webapp_html": "packages/2026-11-22_창세기1장1절-2장3절_천지창조/06_webapps/mixed.html",
+            "dept_zip": "downloads/2026-11-22_창세기1장1절-2장3절_천지창조/05_혼합 통합반_올인원패키지.zip"
+          }
+        }
+      ]
+    },
+    {
+      "pack_id": "2026-11-15_마가복음4장35-41절",
+      "week_date": "2026-11-15",
+      "scripture": "마가복음 4:35~41",
+      "title": "바람과 바다보다 크신 분이 내 배에 계시다",
+      "core_gospel": "폭풍 속에서도 잠잠할 수 있는 이유 — 내 힘이 아니라 배 안에 함께 계신 예수님",
+      "status": "approved",
+      "is_free_sample": true,
+      "approved_at": "2026-11-25 11:46",
+      "reviewer_note": "신학·교수법 사전 검수 및 5개 부서 최종 승인 완료 (무료 체험 샘플 공개)",
+      "hero_image": "assets/thumbs/2026-11-15-hero.jpg",
+      "full_zip_url": "downloads/2026-11-15_마가복음4장35-41절/2026-11-15_마가복음4장35-41절_전부서_통합패키지.zip",
+      "launcher_url": "packages/2026-11-15_마가복음4장35-41절/06_webapps/index.html",
+      "format_summary": "형식 A 교보재 수록",
+      "departments": [
+        {
+          "id": "01_kindergarten",
+          "code": "01",
+          "name": "유치부",
+          "age": "4~7세",
+          "sermon_target": "5~7분",
+          "lesson_minutes": 35,
+          "aid_pdf_pages": 2,
+          "packet_pdf_pages": 6,
+          "aid_format_badge": "형식 A · 컬러링 도안 & TPR 율동카드",
+          "has_alt_aid": false,
+          "alt_aid_badge": "",
+          "sermon_title": "바람보다 크신 예수님이 내 배에 함께 계세요",
+          "thumb_image": "assets/thumbs/2026-11-15-01_kindergarten.jpg",
+          "preview_urls": {
+            "teaching_aid_html": "packages/2026-11-15_마가복음4장35-41절/01_kindergarten/teaching_aid.html",
+            "teacher_packet_html": "packages/2026-11-15_마가복음4장35-41절/01_kindergarten/teacher_packet.html",
+            "webapp_html": "packages/2026-11-15_마가복음4장35-41절/06_webapps/kindergarten.html"
+          },
+          "download_urls": {
+            "aid_pdf": "downloads/2026-11-15_마가복음4장35-41절/01_유치부_A4교보재_2면.pdf",
+            "packet_pdf": "downloads/2026-11-15_마가복음4장35-41절/01_유치부_교사패킷_안내서와설교문.pdf",
+            "aid_html": "packages/2026-11-15_마가복음4장35-41절/01_kindergarten/teaching_aid.html",
+            "packet_html": "packages/2026-11-15_마가복음4장35-41절/01_kindergarten/teacher_packet.html",
+            "webapp_html": "packages/2026-11-15_마가복음4장35-41절/06_webapps/kindergarten.html",
+            "dept_zip": "downloads/2026-11-15_마가복음4장35-41절/01_유치부_올인원패키지.zip"
+          }
+        },
+        {
+          "id": "02_elem_lower",
+          "code": "02",
+          "name": "초등1부",
+          "age": "초등 1~3학년",
+          "sermon_target": "7분",
+          "lesson_minutes": 35,
+          "aid_pdf_pages": 2,
+          "packet_pdf_pages": 6,
+          "aid_format_badge": "형식 A · 12칸 무경쟁 협동 보드게임",
+          "has_alt_aid": false,
+          "alt_aid_badge": "",
+          "sermon_title": "바람과 바다보다 크신 분이 내 배에 계시다",
+          "thumb_image": "assets/thumbs/2026-11-15-02_elem_lower.jpg",
+          "preview_urls": {
+            "teaching_aid_html": "packages/2026-11-15_마가복음4장35-41절/02_elem_lower/teaching_aid.html",
+            "teacher_packet_html": "packages/2026-11-15_마가복음4장35-41절/02_elem_lower/teacher_packet.html",
+            "webapp_html": "packages/2026-11-15_마가복음4장35-41절/06_webapps/elem_lower.html"
+          },
+          "download_urls": {
+            "aid_pdf": "downloads/2026-11-15_마가복음4장35-41절/02_초등1부_A4교보재_2면.pdf",
+            "packet_pdf": "downloads/2026-11-15_마가복음4장35-41절/02_초등1부_교사패킷_안내서와설교문.pdf",
+            "aid_html": "packages/2026-11-15_마가복음4장35-41절/02_elem_lower/teaching_aid.html",
+            "packet_html": "packages/2026-11-15_마가복음4장35-41절/02_elem_lower/teacher_packet.html",
+            "webapp_html": "packages/2026-11-15_마가복음4장35-41절/06_webapps/elem_lower.html",
+            "dept_zip": "downloads/2026-11-15_마가복음4장35-41절/02_초등1부_올인원패키지.zip"
+          }
+        },
+        {
+          "id": "03_elem_upper",
+          "code": "03",
+          "name": "초등2부",
+          "age": "초등 4~6학년",
+          "sermon_target": "10분",
+          "lesson_minutes": 40,
+          "aid_pdf_pages": 2,
+          "packet_pdf_pages": 5,
+          "aid_format_badge": "형식 A · 현장 과학 브리핑 & 수사노트",
+          "has_alt_aid": false,
+          "alt_aid_badge": "",
+          "sermon_title": "바람과 바다보다 크신 분이 내 배에 계시다",
+          "thumb_image": "assets/thumbs/2026-11-15-03_elem_upper.jpg",
+          "preview_urls": {
+            "teaching_aid_html": "packages/2026-11-15_마가복음4장35-41절/03_elem_upper/teaching_aid.html",
+            "teacher_packet_html": "packages/2026-11-15_마가복음4장35-41절/03_elem_upper/teacher_packet.html",
+            "webapp_html": "packages/2026-11-15_마가복음4장35-41절/06_webapps/elem_upper.html"
+          },
+          "download_urls": {
+            "aid_pdf": "downloads/2026-11-15_마가복음4장35-41절/03_초등2부_A4교보재_2면.pdf",
+            "packet_pdf": "downloads/2026-11-15_마가복음4장35-41절/03_초등2부_교사패킷_안내서와설교문.pdf",
+            "aid_html": "packages/2026-11-15_마가복음4장35-41절/03_elem_upper/teaching_aid.html",
+            "packet_html": "packages/2026-11-15_마가복음4장35-41절/03_elem_upper/teacher_packet.html",
+            "webapp_html": "packages/2026-11-15_마가복음4장35-41절/06_webapps/elem_upper.html",
+            "dept_zip": "downloads/2026-11-15_마가복음4장35-41절/03_초등2부_올인원패키지.zip"
+          }
+        },
+        {
+          "id": "04_youth",
+          "code": "04",
+          "name": "청소년부",
+          "age": "중·고등학생",
+          "sermon_target": "10~15분",
+          "lesson_minutes": 35,
+          "aid_pdf_pages": 2,
+          "packet_pdf_pages": 5,
+          "aid_format_badge": "형식 A · 가치관 나눔카드 8종 & 성찰저널",
+          "has_alt_aid": false,
+          "alt_aid_badge": "",
+          "sermon_title": "바람과 바다보다 크신 분이 내 배에 계시다",
+          "thumb_image": "assets/thumbs/2026-11-15-04_youth.jpg",
+          "preview_urls": {
+            "teaching_aid_html": "packages/2026-11-15_마가복음4장35-41절/04_youth/teaching_aid.html",
+            "teacher_packet_html": "packages/2026-11-15_마가복음4장35-41절/04_youth/teacher_packet.html",
+            "webapp_html": "packages/2026-11-15_마가복음4장35-41절/06_webapps/youth.html"
+          },
+          "download_urls": {
+            "aid_pdf": "downloads/2026-11-15_마가복음4장35-41절/04_청소년부_A4교보재_2면.pdf",
+            "packet_pdf": "downloads/2026-11-15_마가복음4장35-41절/04_청소년부_교사패킷_안내서와설교문.pdf",
+            "aid_html": "packages/2026-11-15_마가복음4장35-41절/04_youth/teaching_aid.html",
+            "packet_html": "packages/2026-11-15_마가복음4장35-41절/04_youth/teacher_packet.html",
+            "webapp_html": "packages/2026-11-15_마가복음4장35-41절/06_webapps/youth.html",
+            "dept_zip": "downloads/2026-11-15_마가복음4장35-41절/04_청소년부_올인원패키지.zip"
+          }
+        },
+        {
+          "id": "05_mixed",
+          "code": "05",
+          "name": "혼합 통합반",
+          "age": "유치~초등 통합 (1~5명 · 교사 1인)",
+          "sermon_target": "7~8분",
+          "lesson_minutes": 35,
+          "aid_pdf_pages": 2,
+          "packet_pdf_pages": 4,
+          "aid_format_badge": "형식 A · 다연령 한 팀 협동 트랙보드",
+          "has_alt_aid": false,
+          "alt_aid_badge": "",
+          "sermon_title": "한 배에 타신 예수님이 바람과 바다보다 크셔요",
+          "thumb_image": "assets/thumbs/2026-11-15-05_mixed.jpg",
+          "preview_urls": {
+            "teaching_aid_html": "packages/2026-11-15_마가복음4장35-41절/05_mixed/teaching_aid.html",
+            "teacher_packet_html": "packages/2026-11-15_마가복음4장35-41절/05_mixed/teacher_packet.html",
+            "webapp_html": "packages/2026-11-15_마가복음4장35-41절/06_webapps/mixed.html"
+          },
+          "download_urls": {
+            "aid_pdf": "downloads/2026-11-15_마가복음4장35-41절/05_혼합 통합반_A4교보재_2면.pdf",
+            "packet_pdf": "downloads/2026-11-15_마가복음4장35-41절/05_혼합 통합반_교사패킷_안내서와설교문.pdf",
+            "aid_html": "packages/2026-11-15_마가복음4장35-41절/05_mixed/teaching_aid.html",
+            "packet_html": "packages/2026-11-15_마가복음4장35-41절/05_mixed/teacher_packet.html",
+            "webapp_html": "packages/2026-11-15_마가복음4장35-41절/06_webapps/mixed.html",
+            "dept_zip": "downloads/2026-11-15_마가복음4장35-41절/05_혼합 통합반_올인원패키지.zip"
+          }
+        }
+      ]
+    }
+  ]
+}

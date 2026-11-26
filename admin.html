@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="JUSTJOY 강소교회 다음세대 교육 스튜디오 목회자 검수 및 부서별 보조 자료 업로드 관리자 콘솔" />
+  <meta name="theme-color" content="#1e40af" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <title>목회자 관리자 콘솔 | JUSTJOY 교육 스튜디오</title>
+  <link rel="stylesheet" href="admin/admin.css" />
+</head>
+<body>
+  <a href="#pageTitle" class="skip-link visually-hidden">본문으로 건너뛰기</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand-group">
+        <img src="assets/justjoy_logo.png" alt="JUSTJOY 로고" class="brand-logo" width="120" height="28" />
+        <span class="console-title">목회자 검수 및 업로드 콘솔</span>
+      </div>
+      <nav class="topbar-nav" aria-label="콘솔 이동">
+        <a href="./index.html" class="btn btn-secondary">홈과 커리큘럼</a>
+        <a id="openStudioLink" href="./studio.html" class="btn btn-primary">이 주차 스튜디오 열기</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="mainContent" class="admin-shell">
+    <div class="page-head">
+      <h1 id="pageTitle" tabindex="-1">주차별 교재 승인 및 부서 자료 관리</h1>
+      <p class="page-subtitle">주차별 패키지의 사이트 공개 여부를 전환하고, 5개 부서에 교회 자체 보조 자료를 등록합니다.</p>
+    </div>
+
+    <div id="quotaAlert" class="alert-banner" role="alert" hidden>
+      <div class="alert-banner-body">
+        <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"></circle>
+          <path d="M12 8v5"></path>
+          <path d="M12 16h.01"></path>
+        </svg>
+        <span id="quotaAlertText"></span>
+      </div>
+      <button type="button" id="quotaAlertCloseBtn" class="btn btn-secondary btn-sm">닫기</button>
+    </div>
+
+    <div id="loadingState" class="state-panel" role="status">주차별 교재 목록을 불러오는 중입니다.</div>
+
+    <div id="errorState" class="state-panel" role="alert" hidden>
+      <p id="errorMessage">교재 목록을 불러오지 못했습니다.</p>
+      <div class="action-row">
+        <button type="button" id="retryLoadBtn" class="btn btn-secondary">다시 불러오기</button>
+      </div>
+    </div>
+
+    <div id="emptyState" class="state-panel" hidden>
+      <p>등록된 주차별 교재 패키지가 없습니다.</p>
+    </div>
+
+    <div id="adminContent" hidden>
+      <section class="ledger-section" aria-labelledby="ledgerHeading">
+        <div class="ledger-head">
+          <h2 id="ledgerHeading">주차별 공개 현황표</h2>
+          <span id="ledgerSummary" class="ledger-caption-hint num-cell"></span>
+        </div>
+        <div class="table-scroll">
+          <table class="ledger-table">
+            <caption>주차별 교재 패키지 목록 및 공개 승인 상태</caption>
+            <thead>
+              <tr>
+                <th scope="col">주일 일자</th>
+                <th scope="col">성경 본문</th>
+                <th scope="col">주제</th>
+                <th scope="col">유형</th>
+                <th scope="col">승인 상태</th>
+                <th scope="col">관리</th>
+              </tr>
+            </thead>
+            <tbody id="ledgerBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <div class="bench-grid">
+        <section class="bench-panel" aria-labelledby="approvalHeading">
+          <div class="panel-head">
+            <h2 id="approvalHeading">주차별 게시글 공개 상태 관리</h2>
+            <span id="statusBadge" class="status-tag status-approved" role="status">승인 공개 중</span>
+          </div>
+
+          <div class="field-group">
+            <label for="packSelect">대상 주차 선택</label>
+            <select id="packSelect" name="packId" class="form-control"></select>
+          </div>
+
+          <fieldset class="checklist-group">
+            <legend>목회자 검수 확인 항목</legend>
+            <div class="check-item"><input id="chkTheology" type="checkbox" checked /><label for="chkTheology">신학 가드레일: 기복과 율법주의 배제, 삼위 하나님과 복음 결론 확인</label></div>
+            <div class="check-item"><input id="chkLesson" type="checkbox" checked /><label for="chkLesson">설교와 활동 정렬: 5개 부서 설교 분량 및 35분에서 40분 진행 대본 확인</label></div>
+            <div class="check-item"><input id="chkPrint" type="checkbox" checked /><label for="chkPrint">무가위 A4 2면 및 일러스트: 전 부서 2페이지 출력 및 세대별 도해 확인</label></div>
+            <div class="check-item"><input id="chkGate" type="checkbox" checked /><label for="chkGate">구독 미리보기 게이트: 비구독자 상단 공개와 하단 잠금, 무료 샘플 분리 확인</label></div>
+          </fieldset>
+
+          <div class="field-group">
+            <label for="reviewNoteInput">목회자 점검 메모</label>
+            <span id="reviewNoteHint" class="field-hint">교사 화면의 주차 안내 영역에 함께 표시되는 메모입니다.</span>
+            <input id="reviewNoteInput" name="reviewNote" type="text" class="form-control" aria-describedby="reviewNoteHint" maxlength="200" />
+          </div>
+
+          <div class="action-row">
+            <button type="button" class="btn btn-primary" id="approvePackBtn">승인 완료 (사이트 공개)</button>
+            <button type="button" class="btn btn-secondary" id="holdPackBtn">점검 대기 (비공개 전환)</button>
+            <button type="button" class="btn btn-secondary" id="saveNoteBtn">메모만 저장</button>
+          </div>
+        </section>
+
+        <section class="bench-panel" aria-labelledby="uploadHeading">
+          <div class="panel-head">
+            <h2 id="uploadHeading">부서별 보조 자료 추가 업로드</h2>
+          </div>
+          <p class="panel-desc">웹 문서(html), 마크다운(md), 텍스트(txt), pdf, 이미지(jpg, png) 파일을 등록하면 선택한 주차와 부서 화면에 즉시 반영됩니다.</p>
+
+          <form id="adminUploadForm" aria-labelledby="uploadHeading" novalidate>
+            <div class="field-row-2">
+              <div class="field-group">
+                <label for="uploadDeptSelect">대상 부서</label>
+                <select id="uploadDeptSelect" name="deptId" class="form-control">
+                  <option value="01_kindergarten">유치부</option>
+                  <option value="02_elem_lower">초등1부</option>
+                  <option value="03_elem_upper">초등2부</option>
+                  <option value="04_youth">청소년부</option>
+                  <option value="05_mixed">혼합 통합반</option>
+                </select>
+              </div>
+              <div class="field-group">
+                <label for="uploadCatInput">자료 구분</label>
+                <select id="uploadCatInput" name="category" class="form-control">
+                  <option value="보조 활동지">보조 활동지</option>
+                  <option value="교사 안내 및 설교">교사 안내 및 설교</option>
+                  <option value="디지털 교구">디지털 교구</option>
+                  <option value="보조 이미지 및 PDF">보조 이미지 및 PDF</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="uploadTitleInput">자료 제목 <span aria-hidden="true">*</span></label>
+              <span id="uploadTitleHint" class="field-hint">부서별 교사 화면에 표시될 자료 이름입니다.</span>
+              <input id="uploadTitleInput" name="title" type="text" class="form-control" required maxlength="80" placeholder="예: 초등2부 암송 복습 카드" aria-describedby="uploadTitleHint" data-error="uploadTitleError" />
+              <div id="uploadTitleError" class="field-error">자료 제목을 입력해 주세요.</div>
+            </div>
+
+            <div class="field-group">
+              <label for="uploadDescInput">간단 설명</label>
+              <input id="uploadDescInput" name="desc" type="text" class="form-control" maxlength="140" placeholder="예: 주일 공과 마무리 5분 활용 시트" />
+            </div>
+
+            <div class="field-group">
+              <input id="adminFileInput" name="file" type="file" accept=".html,.htm,.md,.txt,.pdf,.jpg,.jpeg,.png" class="visually-hidden file-input-hidden" data-error="uploadFileError" />
+              <label for="adminFileInput" id="uploadDropzone" class="dropzone">
+                <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 15V3"></path>
+                  <path d="m7 8 5-5 5 5"></path>
+                  <path d="M4 20h16"></path>
+                </svg>
+                <span id="fileLabel" class="dropzone-label">클릭하거나 파일을 끌어다 놓아 선택하세요 (.html, .md, .txt, .pdf, .jpg, .png)</span>
+              </label>
+              <div id="uploadFileError" class="field-error">업로드할 파일을 먼저 선택해 주세요.</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full" id="submitUploadBtn">부서에 자료 등록하기</button>
+          </form>
+
+          <div class="uploads-block">
+            <div class="panel-head">
+              <h3 id="uploadsListHeading">선택 주차에 등록된 추가 자료 (<span id="uploadsCount">0</span>건)</h3>
+            </div>
+            <div id="customUploadsContainer"></div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>JUSTJOY 강소교회 다음세대 교육 스튜디오</span>
+      <span>부산광역시 월드컵대로 221, 2층 (rlagksquf927@gmail.com)</span>
+    </div>
+  </footer>
+
+  <div role="region" aria-label="작업 알림" class="toast-region">
+    <div id="statusToast" class="toast-box" role="status" hidden>
+      <span id="toastMessage"></span>
+      <div class="toast-actions">
+        <button type="button" id="toastUndoBtn" class="toast-btn" hidden>되돌리기</button>
+        <button type="button" id="toastCloseBtn" class="toast-btn">닫기</button>
+      </div>
+    </div>
+  </div>
+  <div id="politeAnnouncer" class="visually-hidden" aria-live="polite"></div>
+
+  <script type="module" src="admin/admin.js"></script>
+</body>
+</html>

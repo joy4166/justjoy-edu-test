@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>작은교회 혼합 통합반 교사 패킷 — 창세기 1:1~2:3 천지창조</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 12mm;
+    }
+
+    :root {
+      --forest: #264E3E;
+      --sage: #3F735D;
+      --sage-soft: #EFF6F2;
+      --sage-border: #BDD6C9;
+      --ink: #21302A;
+      --muted: #52665D;
+      --bg: #EEF2EF;
+      --surface: #FFFFFF;
+      --cream: #FBF8F2;
+      --cream-border: #DFD5C3;
+      --coral: #C95B42;
+      --coral-soft: #FDF2EF;
+      --coral-border: #ECC0B4;
+      --gold: #B67D1E;
+      --gold-soft: #FFFBEB;
+      --line: #D4DFD9;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "Nanum Gothic", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      word-break: keep-all;
+      font-size: 15.5px;
+    }
+
+    /* Screen Sticky Toolbar */
+    .screen-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: var(--forest);
+      color: #F8FAFC;
+      padding: 10px 16px;
+      box-shadow: 0 4px 16px rgba(33, 48, 42, 0.18);
+    }
+
+    .toolbar-inner {
+      max-width: 840px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .toolbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 0.92rem;
+      color: #FDE68A;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .nav-btn {
+      display: inline-block;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.14);
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.26);
+      padding: 6px 11px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .nav-btn:hover {
+      background: rgba(255, 255, 255, 0.24);
+    }
+
+    .print-btn {
+      background: #DF755B;
+      color: #FFFFFF;
+      border: none;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .print-btn:hover {
+      background: #EA836A;
+    }
+
+    .packet-wrap {
+      max-width: 840px;
+      margin: 18px auto 36px;
+      padding: 0 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .sheet-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 24px 26px;
+      box-shadow: 0 6px 24px rgba(33, 48, 42, 0.06);
+    }
+
+    .packet-header {
+      border-bottom: 2px solid var(--forest);
+      padding-bottom: 14px;
+      margin-bottom: 16px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: var(--sage-soft);
+      color: var(--forest);
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 99px;
+      margin-bottom: 6px;
+    }
+
+    .packet-header h1 {
+      font-size: 1.48rem;
+      font-weight: 900;
+      color: var(--forest);
+      letter-spacing: -0.4px;
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+
+    .meta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-size: 0.86rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .gospel-callout {
+      background: var(--cream);
+      border: 1px solid var(--cream-border);
+      border-left: 4px solid var(--gold);
+      border-radius: 10px;
+      padding: 12px 15px;
+      margin-bottom: 18px;
+    }
+
+    .gospel-callout .label {
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: #8E5F11;
+      margin-bottom: 3px;
+    }
+
+    .gospel-callout p {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--forest);
+      line-height: 1.48;
+    }
+
+    .part-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      background: var(--forest);
+      color: #FFFFFF;
+      padding: 10px 15px;
+      border-radius: 10px;
+      margin-bottom: 16px;
+    }
+
+    .part-banner .part-tag {
+      background: #F3C669;
+      color: #21302A;
+      font-size: 0.78rem;
+      font-weight: 900;
+      padding: 2px 9px;
+      border-radius: 6px;
+      margin-right: 8px;
+    }
+
+    .part-banner h2 {
+      font-size: 1.1rem;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .part-banner .part-sub {
+      font-size: 0.8rem;
+      color: #D7E5DE;
+      font-weight: 600;
+    }
+
+    .guide-block {
+      margin-bottom: 18px;
+    }
+
+    .guide-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .guide-h3 {
+      font-size: 1.02rem;
+      font-weight: 900;
+      color: var(--forest);
+      margin-bottom: 8px;
+      padding-left: 9px;
+      border-left: 3.5px solid var(--coral);
+    }
+
+    table.info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 8px 0 10px;
+      font-size: 0.88rem;
+    }
+
+    table.info-table th,
+    table.info-table td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.45;
+    }
+
+    table.info-table th {
+      background: var(--sage-soft);
+      color: var(--forest);
+      font-weight: 800;
+    }
+
+    .tip-note {
+      background: var(--cream);
+      border: 1px solid var(--cream-border);
+      border-radius: 8px;
+      padding: 9px 12px;
+      font-size: 0.87rem;
+      color: var(--ink);
+    }
+
+    .zone-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .zone-box {
+      border-radius: 10px;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      background: #FAFDFB;
+      font-size: 0.88rem;
+    }
+
+    .zone-box.p1 {
+      border-color: var(--sage-border);
+      background: var(--sage-soft);
+    }
+
+    .zone-box.p2 {
+      border-color: var(--coral-border);
+      background: var(--coral-soft);
+    }
+
+    .zone-box h4 {
+      font-size: 0.94rem;
+      font-weight: 900;
+      color: var(--forest);
+      margin-bottom: 6px;
+    }
+
+    .zone-box.p2 h4 {
+      color: #9E3E29;
+    }
+
+    .zone-box ul {
+      padding-left: 17px;
+    }
+
+    .zone-box li {
+      margin-bottom: 4px;
+    }
+
+    .answer-key {
+      margin-top: 10px;
+      background: var(--gold-soft);
+      border: 1px solid #E7CD93;
+      border-radius: 9px;
+      padding: 10px 13px;
+      font-size: 0.88rem;
+      line-height: 1.52;
+    }
+
+    .answer-key strong {
+      color: #84570D;
+    }
+
+    .webapp-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 8px 0;
+    }
+
+    .step-card {
+      border-radius: 10px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      font-size: 0.85rem;
+    }
+
+    .step-card.k { background: var(--coral-soft); border-color: var(--coral-border); }
+    .step-card.e { background: var(--sage-soft); border-color: var(--sage-border); }
+    .step-card.c { background: var(--cream); border-color: var(--cream-border); }
+
+    .step-card .st-head {
+      font-weight: 900;
+      font-size: 0.88rem;
+      margin-bottom: 4px;
+      color: var(--forest);
+    }
+
+    /* Part 2: Sermon Script */
+    .sermon-section-page {
+      page-break-before: always;
+      break-before: page;
+    }
+
+    .sermon-title-box {
+      border-bottom: 1.5px solid var(--line);
+      padding-bottom: 10px;
+      margin-bottom: 14px;
+    }
+
+    .sermon-title-box h3 {
+      font-size: 1.28rem;
+      font-weight: 900;
+      color: var(--forest);
+      letter-spacing: -0.3px;
+    }
+
+    .sermon-title-box p {
+      font-size: 0.86rem;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+
+    .sermon-stage {
+      margin-bottom: 18px;
+    }
+
+    .stage-label {
+      display: inline-block;
+      background: var(--sage-soft);
+      color: var(--forest);
+      border: 1px solid var(--sage-border);
+      font-size: 0.84rem;
+      font-weight: 900;
+      padding: 3px 10px;
+      border-radius: 7px;
+      margin-bottom: 10px;
+    }
+
+    .sermon-beat {
+      margin-bottom: 12px;
+      padding-left: 12px;
+      border-left: 3px solid #DCE5DF;
+    }
+
+    .sermon-beat.beat-kid {
+      border-left-color: var(--coral);
+      background: #FFF9F7;
+      padding: 8px 12px;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .sermon-beat.beat-elem {
+      border-left-color: var(--sage);
+      background: #F6FBF8;
+      padding: 8px 12px;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .sermon-beat.beat-action {
+      border-left-color: var(--gold);
+      background: #FFFDF5;
+      padding: 8px 12px;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .cue-pill {
+      display: inline-block;
+      font-size: 0.77rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 6px;
+      margin-bottom: 5px;
+      color: var(--forest);
+      background: #E7EFEA;
+    }
+
+    .beat-kid .cue-pill    { background: #FBE5DF; color: #9E3E29; }
+    .beat-elem .cue-pill   { background: #DFEFE6; color: #264E3E; }
+    .beat-action .cue-pill { background: #FBF0CE; color: #84570D; }
+
+    .spoken {
+      font-size: 1.03rem;
+      line-height: 1.75;
+      color: #192620;
+      font-weight: 500;
+    }
+
+    .chant-highlight {
+      font-weight: 900;
+      color: var(--forest);
+      background: #FEF3C7;
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 680px) {
+      .sheet-card { padding: 16px 15px; }
+      .zone-grid, .webapp-steps { grid-template-columns: 1fr; }
+      .packet-header h1 { font-size: 1.28rem; }
+      .spoken { font-size: 1.02rem; line-height: 1.72; }
+    }
+
+    @media print {
+      .screen-toolbar { display: none !important; }
+      body { background: #FFFFFF !important; font-size: 9.4pt; line-height: 1.42; }
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      .packet-wrap { max-width: 100%; margin: 0; padding: 0; gap: 0; }
+      .sheet-card {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        border-radius: 0;
+      }
+      .packet-header { padding-bottom: 8px; margin-bottom: 10px; }
+      .packet-header h1 { font-size: 1.24rem; margin-bottom: 3px; }
+      .gospel-callout { padding: 8px 12px; margin-bottom: 10px; }
+      .part-banner { padding: 7px 12px; margin-bottom: 10px; }
+      .guide-block { margin-bottom: 10px; break-inside: avoid; page-break-inside: avoid; }
+      table.info-table { margin: 5px 0 6px; font-size: 8.5pt; }
+      table.info-table th, table.info-table td { padding: 5px 7px; line-height: 1.35; }
+      .zone-box, .step-card, .tip-note, .answer-key { padding: 7px 10px; font-size: 8.4pt; }
+      .sermon-section-page {
+        page-break-before: always;
+        break-before: page;
+        padding-top: 0;
+      }
+      .sermon-stage { margin-bottom: 11px; }
+      .sermon-beat { margin-bottom: 7px; padding: 5px 9px !important; break-inside: avoid; page-break-inside: avoid; }
+      .spoken { font-size: 9.8pt; line-height: 1.52; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="screen-toolbar">
+    <div class="toolbar-inner">
+      <div class="toolbar-brand">혼합 통합반 교사 패킷 [형식 B] · 창세기 1:1~2:3 천지창조</div>
+      <div class="toolbar-actions">
+        <a href="#part1" class="nav-btn">Part 1 · 교보재 안내서</a>
+        <a href="#part2" class="nav-btn">Part 2 · 설교문 완본</a>
+        <button type="button" class="print-btn" onclick="window.print()">A4 인쇄하기</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="packet-wrap">
+    <!-- ==================== PART 1: 교보재·웹앱 사용 안내서 ==================== -->
+    <section class="sheet-card" id="part1">
+      <header class="packet-header">
+        <span class="eyebrow">2026-11-22 · 작은교회 혼합 통합반 (유치 4~7세 + 초등 8~13세, 1~5명, 교사 1인)</span>
+        <h1>혼합 통합반 교사용 패킷 (형식 B 교보재 안내서 + 설교문 완본)</h1>
+        <div class="meta-row">
+          <span>성경 본문: 창세기 1:1~2:3 (교차: 요 1:1~3, 시 8:3~5, 고후 4:6)</span>
+          <span>설교 7~8분 + 활동 35분</span>
+          <span>기본 교보재: teaching_aid.html (패밀리 창조 정원 매트 &amp; 서로 축복 액자)</span>
+        </div>
+      </header>
+
+      <div class="gospel-callout">
+        <div class="label">이번 주 핵심 복음 한 문장 (One Gospel)</div>
+        <p>"나이와 모습이 달라도 동생과 형·누나 모두 하나님이 말씀으로 참 좋게 빚으시고 예수님 안에서 새롭게 하신 걸작품입니다."</p>
+      </div>
+
+      <div class="part-banner">
+        <h2><span class="part-tag">PART 1</span>혼합 통합반 교보재(형식 B)·웹앱 사용 안내서</h2>
+        <span class="part-sub">무가위(No-Cut) 한 식탁 합동 매트 &amp; 양방향 축복 액자 운영법</span>
+      </div>
+
+      <div class="guide-block">
+        <h3 class="guide-h3">1. 인쇄 매수 및 A4 출력 설정 (가위·주사위 없는 No-Cut 2페이지)</h3>
+        <table class="info-table">
+          <thead>
+            <tr>
+              <th style="width:30%;">구분</th>
+              <th style="width:24%;">필요 인쇄 매수</th>
+              <th>현장 활용 방법</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1면 (1페이지)</strong><br>하나님이 지으신 생명 정원 합동 매트</td>
+              <td>식탁 합동용 <strong>1~2장</strong><br><span style="color:var(--muted); font-size:0.86em;">(개인 소장 시 인원수대로)</span></td>
+              <td>식탁 중앙에 펼쳐 놓고 좌측 <strong>유치 동생(그림 탐험가)</strong>의 색칠·동작과 우측 <strong>초등 형·누나(말씀 해설사)</strong>의 성경 단서 라벨을 가운데 화살표로 이어 완성합니다.</td>
+            </tr>
+            <tr>
+              <td><strong>2면 (2페이지)</strong><br>서로 세워 주는 형제자매 축복 액자 &amp; 식탁 미션</td>
+              <td><strong>참여 아이 수 + 교사 1장</strong><br><span style="color:var(--muted); font-size:0.86em;">(예: 아이 3명이면 4장)</span></td>
+              <td>상단 좌측은 형·누나가 써 주는 동생 인터뷰 카드, 우측은 동생이 선물하는 왕관·별 액자로 교환하고, 하단은 반으로 접어 가정 저녁 식탁에 세워 둡니다.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="tip-note">
+          <strong>인쇄 &amp; 별책 옵션 팁:</strong> <code>teaching_aid.html</code>을 Chrome에서 열고 <strong>[A4 2페이지 인쇄하기]</strong> 클릭(용지 A4, 배율 100%, 배경 그래픽 켜기, 머리글/바닥글 해제 → 정확히 2p 출력). 주사위 트랙 보드판 놀이를 원하시는 주간에는 함께 보존된 <code>teaching_aid_ver_a.html</code>(형식 A: 5구간 협동 트랙 보드판)을 선택 인쇄하실 수 있습니다.
+        </div>
+      </div>
+
+      <div class="guide-block">
+        <h3 class="guide-h3">2. 준비물 &amp; 현장 100% 무전원·무도구 대체법</h3>
+        <table class="info-table">
+          <thead>
+            <tr>
+              <th style="width:28%;">기본 준비물</th>
+              <th>없을 때 바로 쓰는 대체품</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>색연필 · 크레파스</strong></td>
+              <td>색연필이 없으면 일반 <strong>연필·볼펜</strong>으로 해·달·별 스탬프와 왕관 보석에 빗금·물결 무늬를 채우고 웃는 얼굴을 그려도 멋진 드로잉 액자가 완성됩니다.</td>
+            </tr>
+            <tr>
+              <td><strong>성경책 1~2권 &amp; 연필</strong></td>
+              <td>성경책이 부족하면 교사 성경 1권을 가운데 펼쳐 함께 찾거나, 1면 오른쪽 단서 라벨에 인쇄된 <strong>장절 표기와 초성 힌트</strong>를 보고 즉시 채울 수 있습니다.</td>
+            </tr>
+            <tr>
+              <td><strong>태블릿 · 전원 (선택)</strong></td>
+              <td><strong>무전원 100% 진행:</strong> 주사위·말·전기가 전혀 없어도 <code>teaching_aid.html</code> 2면 인쇄물과 선창·후창 목소리 합창만으로 35분 활동 전체를 완주합니다.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="guide-block">
+        <h3 class="guide-h3">3. 형식 B 1면·2면 구역별 해설 &amp; 정답 치트키</h3>
+        <div class="zone-grid">
+          <div class="zone-box p1">
+            <h4>1면 · 한 식탁 생명 정원 합동 매트</h4>
+            <ul>
+              <li><strong>역할 분담</strong>: 동생은 <em>그림 탐험가</em> · 형·누나는 <em>말씀 해설사</em></li>
+              <li><strong>좌측 (유치 동생 3탐험)</strong>: ① 해·달·별 노란색 색칠 + <em>"반짝! 빛이 있으라!"</em> → ② 새·물고기 색칠 + 몸동작 → ③ 스마일 배지 색칠 + 자기 어깨 꼬옥 안기</li>
+              <li><strong>우측 (초등 형·누나 3단서)</strong>: 창 1:1,3 · 창 1:27,31 · 요 1:1~3 &amp; 창 2:3 빈칸 6개 완성 후 동생 눈을 보며 1문장 해설 읽어 주기</li>
+              <li><strong>하단 합창</strong>: 창조 가족 구호(선창·후창) 후 <strong>합동 완성 별표 5개</strong> 색칠</li>
+            </ul>
+          </div>
+          <div class="zone-box p2">
+            <h4>2면 · 서로 세워 주는 형제자매 축복 액자 &amp; 가정 안식</h4>
+            <ul>
+              <li><strong>상단 좌측 (형·누나 작성)</strong>: ‘하나님의 보물 동생 인터뷰 카드’에 동생의 멋졌던 모습 체크·기록 + 축복 문장 낭독 + 초등 1줄 신앙 고백</li>
+              <li><strong>상단 우측 (동생 선물)</strong>: ‘축복 왕관 &amp; 반짝 별 액자’ 안에 알록달록 보석과 형·누나(선생님)의 웃는 얼굴 그려 선물하기</li>
+              <li><strong>하단 (가정 식탁 미션)</strong>: 저녁 식탁 ‘토브(참 좋다!)’ 칭찬 릴레이 3단계 + 월~주일 7일 가정 안식 체크표 + 가족 축복 기도문</li>
+            </ul>
+          </div>
+        </div>
+        <div class="answer-key">
+          <strong>교사용 1면 성경 단서 라벨 6개 정답 치트키:</strong><br/>
+          • 단서 1 (창 1:1 &amp; 1:3): 태초에 <strong>[ 하나님 ]</strong>(ㅎㄴㄴ)이 천지를 창조하시고 말씀으로 <strong>[ 빛 ]</strong>(ㅂ)을 비추셨다! <em>(원어: 바라)</em><br/>
+          • 단서 2 (창 1:27 &amp; 1:31): 우리 모두를 <strong>[ 하나님의 형상 ]</strong>(ㅎㄴㄴㅇ ㅎㅅ)으로 지으시고 보시기에 <strong>[ 심히 좋았 ]</strong>(ㅅㅎ ㅈㅇ)더라 선언하셨다! <em>(원어: 토브 메오드)</em><br/>
+          • 단서 3 (요 1:1~3 &amp; 창 2:3): 말씀이신 <strong>[ 예수님 ]</strong>(ㅇㅅㄴ) 안에서 우리에게 참된 <strong>[ 안식 ]</strong>(ㅇㅅ)을 주신다!
+        </div>
+      </div>
+
+      <div class="guide-block">
+        <h3 class="guide-h3">4. 보조 웹앱(<code>06_webapps/mixed.html</code>) 활용 &amp; 별책 옵션 안내</h3>
+        <div class="webapp-steps">
+          <div class="step-card k">
+            <div class="st-head">① 오프라인 즉시 실행</div>
+            <div>와이파이 없이도 태블릿에서 <code>mixed.html</code>을 열어 설교 복습 동작·단서 퀴즈 보조로 활용</div>
+          </div>
+          <div class="step-card e">
+            <div class="st-head">② 좌/우 ⇄ · 상/하 ⇅ 전환</div>
+            <div>나란히 앉으면 <code>⇄ 좌/우</code>, 마주 앉으면 <code>⇅ 상/하</code> 모드로 식탁 좌석에 맞게 전환</div>
+          </div>
+          <div class="step-card c">
+            <div class="st-head">③ 무전원 &amp; 별책 호환</div>
+            <div>기기 없이 종이 매트만으로 100% 진행 가능하며, 트랙 보드판 원할 시 <code>teaching_aid_ver_a.html</code> 활용</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="guide-block">
+        <h3 class="guide-h3">5. 인원 · 연령 조합별 테이블 운용 팁 (혼합 · 유치만 · 초등만)</h3>
+        <table class="info-table">
+          <tbody>
+            <tr>
+              <td style="width:28%;"><strong>혼합 출석일 때</strong><br><span style="color:var(--muted); font-size:0.86em;">(유치 동생 + 초등 형·누나)</span></td>
+              <td>동생-초등 <strong>1:1 또는 1:2 식탁 짝꿍</strong>으로 나란히 앉힙니다. 친남매·형제가 서로 재촉하려 하면 <em>"형·누나는 말씀 해설사, 동생은 그림 탐험가야. 두 작품이 만나야 정원이 완성돼"</em>라고 세워 주시고, 2면 인터뷰 카드와 왕관 액자를 서로 교환하게 합니다.</td>
+            </tr>
+            <tr>
+              <td><strong>유치 동생만 있을 때</strong><br><span style="color:var(--muted); font-size:0.86em;">(4~7세 1~3명 출석)</span></td>
+              <td><strong>교사가 다정한 ‘형·누나 말씀 해설사’ 파트너</strong>가 됩니다. 1면 우측 성경 단서는 교사가 빈칸을 채워 쉬운 한 문장으로 읽어 주고, 2면 좌측 <strong>‘보물 동생 인터뷰 카드’를 교사가 직접 써서 읽어 주며</strong> 아이는 교사·부모님께 드릴 왕관 액자를 꾸밉니다.</td>
+            </tr>
+            <tr>
+              <td><strong>초등 형·누나만 있을 때</strong><br><span style="color:var(--muted); font-size:0.86em;">(8~13세 1~3명 출석)</span></td>
+              <td>유아 동작 강요 대신 교사가 3초 탐험가 시범을 보여 유쾌하게 넘기고, 창세기 1장의 <strong>1~3일(공간) vs 4~6일(채움) 구조</strong>와 원어(<code>바라</code>·<code>토브 메오드</code>), 요한복음 1장 새 창조 복음을 깊이 탐구한 뒤 초등 친구끼리(1명 시 교사와 1:1) 격려 인터뷰 카드와 신앙 고백을 나눕니다.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ==================== PART 2: 통합반 7~8분 설교문 완본 ==================== -->
+    <section class="sheet-card sermon-section-page" id="part2">
+      <div class="part-banner">
+        <h2><span class="part-tag">PART 2</span>혼합 통합반 7~8분 설교문 완본 (테이블 낭독용)</h2>
+        <span class="part-sub">유치 동생 동작 구호 ↔ 초등 단서·원어 질문 교차형 (sermon.md 완본)</span>
+      </div>
+
+      <div class="sermon-title-box">
+        <h3>말씀으로 세상을 지으시고, 나를 ‘참 좋게’ 빚으신 하나님</h3>
+        <p>성경 본문: 창세기 1:1~2:3 (교차 본문: 요한복음 1:1~3, 시편 8:3~5, 고린도후서 4:6) · 예상 소요: 7~8분 (순수 발화 2,092자)</p>
+      </div>
+
+      <!-- 1. 도입 -->
+      <div class="sermon-stage">
+        <span class="stage-label">1. 도입 — 우연과 비교 속에서 흔들리는 동생과 형·누나의 마음</span>
+
+        <div class="sermon-beat">
+          <span class="cue-pill">[표정: 테이블 아이들과 한 명씩 따뜻하게 눈을 맞추며]</span>
+          <p class="spoken">오늘 귀여운 동생도 있고, 든든한 형과 누나도 있고, 선생님도 한 테이블에 둘러앉았네요. 지금 우리 테이블을 하나님이 가꾸신 아름다운 창조 정원이라고 상상해 볼까요?</p>
+        </div>
+
+        <div class="sermon-beat beat-kid">
+          <span class="cue-pill">[동생 질문]</span>
+          <p class="spoken">먼저 동생들에게 물어볼게요. 밤에 불이 꺼져 깜깜할 때 무서웠던 적 있나요? 또 친구 장난감이나 그림이 더 멋져 보이면 "나는 미운가 봐" 하고 속상할 때가 있지요.</p>
+        </div>
+
+        <div class="sermon-beat beat-elem">
+          <span class="cue-pill">[초등 공감 질문]</span>
+          <p class="spoken">형과 누나는 어때요? 학교 점수나 외모, 실력을 남과 비교하다 보면 내 모습이 작아 보일 때가 있지요. 세상은 우주와 내가 어쩌다 우연히 생겨났다고 말하고, 남보다 잘하고 쓸모 있어야 가치 있다고 몰아세워요. 그래서 쉬는 시간조차 불안할 때가 있어요.</p>
+        </div>
+
+        <div class="sermon-beat">
+          <p class="spoken">정말 우리는 어쩌다 태어난 우연일까요? 성경 첫 장인 창세기 1장 1절부터 2장 3절에서 진짜 답을 찾아봅시다.</p>
+        </div>
+      </div>
+
+      <!-- 2. 본문 해부 -->
+      <div class="sermon-stage">
+        <span class="stage-label">2. 본문 해부 — 어둠을 가르는 말씀, 나를 위해 지으신 집과 참 안식</span>
+
+        <div class="sermon-beat">
+          <span class="cue-pill">[교구: 성경 창세기 1장 1절을 손가락으로 짚으며]</span>
+          <p class="spoken">성경은 이렇게 문을 열어요. "태초에 하나님이 천지를 창조하시니라."</p>
+        </div>
+
+        <div class="sermon-beat beat-elem">
+          <span class="cue-pill">[초등 단서: 원어 한 스푼]</span>
+          <p class="spoken">형과 누나를 위한 첫 번째 원어 힌트예요! '창조하다'는 히브리어로 '바라'인데, 오직 하나님만 주어로 쓰시는 단어예요. 옛 신화처럼 신들이 피 흘려 싸우다 어쩌다 세상이 생긴 게 아니라, 하나님이 평화롭고 힘 있는 말씀으로 새 질서를 불러내셨어요.</p>
+        </div>
+
+        <div class="sermon-beat">
+          <p class="spoken">처음 땅은 형태도 없이 텅 빈 채 캄캄한 어둠에 덮여 있었어요. 그때 하나님의 영이 어미 새가 알을 품듯 수면 위를 감싸셨고, 첫 말씀이 울려 퍼집니다. "빛이 있으라 하시니 빛이 있었고!"</p>
+        </div>
+
+        <div class="sermon-beat beat-action">
+          <span class="cue-pill">[동작: 두 주먹을 쥐었다가 얼굴 옆에서 활짝 펴며]</span>
+          <p class="spoken">형과 누나도 동생과 박자를 맞춰 외쳐 주세요. <span class="chant-highlight">"반짝! 빛이 있으라!"</span></p>
+        </div>
+
+        <div class="sermon-beat beat-elem">
+          <span class="cue-pill">[초등 관찰 질문]</span>
+          <p class="spoken">초등 탐정들, 창세기 1장에는 정교한 집 짓기 순서가 숨어 있어요. 첫째 날부터 셋째 날까지는 생명이 살 '공간'을 먼저 지으셨어요. 빛과 어둠을 나누시고, 하늘과 바다를 펼치시고, 마른 땅에 풀과 열매 나무를 내셨지요. 넷째 날부터 여섯째 날까지는 그 집에 '빛과 생명'을 채우셨어요. 해·달·별은 두려워할 신이 아니라 하나님이 달아 두신 등불이에요. 과학 시간에 배우듯 지구와 태양이 정확한 거리에 놓여 숨 쉬며 살 수 있는 것도 창조주의 지혜로운 설계예요.</p>
+        </div>
+
+        <div class="sermon-beat beat-kid">
+          <span class="cue-pill">[동작: 두 팔을 크게 벌렸다가 새처럼 파닥이며]</span>
+          <p class="spoken">동생들, 몸으로 함께 표현해 봐요! 두 팔을 크게 벌리고, <span class="chant-highlight">"활짝! 하늘과 바다!"</span> 이번엔 손을 흔들며, <span class="chant-highlight">"파닥파닥! 새와 물고기!"</span></p>
+        </div>
+
+        <div class="sermon-beat">
+          <p class="spoken">드디어 여섯째 날, 아기 방과 식탁을 미리 차려 놓은 부모님처럼 하나님이 동물들을 만드신 뒤 사람을 지으셨어요. 27절을 보면 우리 모두를 노예가 아니라 하나님의 사랑을 비추는 왕 같은 대표, 곧 '하나님의 형상'으로 지으셨어요. 시편 8편처럼 작은 사람에게 존귀한 관을 씌워 주신 거예요.</p>
+        </div>
+
+        <div class="sermon-beat beat-elem">
+          <span class="cue-pill">[초등 단서: 원어 한 스푼]</span>
+          <p class="spoken">형과 누나, 두 번째 원어 힌트예요! 닷새 동안 "좋았더라" 하시던 하나님이 사람을 지으신 31절에서는 "보시기에 심히 좋았더라!", 히브리어로 '토브 메오드'라고 감탄하셨어요. 내가 백 점을 맞기 전에 내 존재에 먼저 찍어 주신 걸작품 도장이에요.</p>
+        </div>
+
+        <div class="sermon-beat beat-action">
+          <span class="cue-pill">[동작: 두 팔로 내 어깨를 꼭 감싸 안으며]</span>
+          <p class="spoken">모두 내 몸을 꼭 안으며 외쳐 봅시다. <span class="chant-highlight">"꼭 안아! 참 보기 좋구나!"</span></p>
+        </div>
+
+        <div class="sermon-beat">
+          <p class="spoken">그리고 일곱째 날, 모든 일을 마치신 하나님은 거룩한 '안식'에 들어가시며 우리를 참된 쉼과 기쁨으로 초대하셨어요.</p>
+        </div>
+      </div>
+
+      <!-- 3. 복음의 반전 -->
+      <div class="sermon-stage">
+        <span class="stage-label">3. 복음의 반전 — 어두워진 마음에 다시 "빛이 있으라" 하시는 예수님</span>
+
+        <div class="sermon-beat">
+          <p class="spoken">그런데 왜 지금 우리 마음은 자주 비교하고 미워하며 어두워질까요? 첫 사람이 하나님을 떠나 죄가 들어오면서 우리 안의 형상이 깨어지고 안식을 잃었기 때문이에요. "나는 스스로 완벽해"라고 다짐해도 이 어둠은 사라지지 않아요.</p>
+        </div>
+
+        <div class="sermon-beat beat-elem">
+          <span class="cue-pill">[초등 단서 질문]</span>
+          <p class="spoken">형, 누나! 요한복음 1장 1절부터 3절에서 태초에 만물을 지으신 그 '말씀'이 누구라고 하나요? 맞아요, 바로 예수 그리스도이세요!</p>
+        </div>
+
+        <div class="sermon-beat">
+          <p class="spoken">나를 지으신 예수님은 죄로 어두워진 나를 포기하지 않으셨어요. 십자가에서 내 죄와 수치의 캄캄한 어둠을 대신 삼키시고 "다 이루었다" 외치셨어요. 고린도후서 4장 6절 말씀처럼, 예수님이 무너진 내 마음에 다시 "빛이 있으라!" 새 창조의 빛을 비추어 참 안식을 주셨어요. 내가 잘나서가 아니라 예수님이 십자가 피로 다시 살리셨기에 우리는 흔들리지 않는 걸작품이에요.</p>
+        </div>
+      </div>
+
+      <!-- 4. 오늘의 순종 -->
+      <div class="sermon-stage" style="margin-bottom:0;">
+        <span class="stage-label">4. 오늘의 순종 — 나와 옆 친구를 걸작품으로 축복하는 한 주</span>
+
+        <div class="sermon-beat">
+          <p class="spoken">이번 주 세 가지를 기억해요. 비교될 때마다 세상의 점수표 대신 나를 '토브 메오드'라 부르시는 예수님 안에서 쉬세요. 또 옆에 앉은 동생과 형·누나에게 놀리는 말 대신 "너는 하나님의 걸작품이야!" 하고 축복해 주세요. 그리고 하나님이 맡기신 내 몸과 시간, 자연을 소중히 돌봐요.</p>
+        </div>
+
+        <div class="sermon-beat beat-action" style="margin-bottom:0;">
+          <span class="cue-pill">[동작: 옆 사람과 눈을 맞추고 가슴에 두 손을 모으며]</span>
+          <p class="spoken">창조 정원의 한 가족이 되어 함께 고백하고 기도합시다. <span class="chant-highlight">"하나님이 말씀으로 만드셨어요! 나를 참 좋게 만드셨어요!"</span> 아멘.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

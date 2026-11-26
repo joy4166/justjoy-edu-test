@@ -1,0 +1,28 @@
+{
+  "name": "JUSTJOY 강소교회 다음세대 교육 스튜디오",
+  "short_name": "JUSTJOY",
+  "description": "작은교회 교사를 위한 한 본문 다섯 세대 설교문, 소인원 대본, 무가위 A4 활동지 수업 준비 플랫폼",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f6f8",
+  "theme_color": "#1e40af",
+  "lang": "ko",
+  "icons": [
+    {
+      "src": "./assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

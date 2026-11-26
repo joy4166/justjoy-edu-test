@@ -1,0 +1,65 @@
+/* Hallmark · shape: app screen · genre: editorial · theme: Almanac (by request)
+ * nav: unified 4-link header · signature: clean 1px hairline columns and mobile stacked format table · states: visitor, subscribed
+ * axes: mid/grotesk-sans/chromatic-cobalt · posture: restrained · contrast: pass · v2.0.0 */
+
+.pages-main { width: 100%; max-width: var(--container); margin-inline: auto; padding: var(--space-xl) var(--gutter) var(--space-3xl); flex: 1; display: flex; flex-direction: column; gap: var(--space-xl); }
+.page-intro { display: flex; flex-direction: column; gap: var(--space-sm); }
+.page-intro h1 { max-width: 26ch; font-size: var(--text-hero); line-height: 1.24; }
+.page-intro-lead { max-width: 62ch; color: var(--color-ink-2); line-height: 1.68; }
+.page-intro-actions { display: flex; gap: var(--space-sm); flex-wrap: wrap; margin-top: var(--space-xs); }
+
+.content-band { padding-top: var(--space-lg); border-top: var(--rule-hair) solid var(--color-rule); display: flex; flex-direction: column; gap: var(--space-md); }
+.band-head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); flex-wrap: wrap; }
+
+.pillars-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); background-color: var(--color-paper); border-top: var(--rule-bar) solid var(--color-ink); border-bottom: var(--rule-hair) solid var(--color-rule-2); }
+.pillar-cell { padding: var(--space-lg); border-right: var(--rule-hair) solid var(--color-rule); display: flex; flex-direction: column; gap: var(--space-xs); }
+.pillar-cell:last-child { border-right: none; }
+.pillar-icon { color: var(--color-accent); display: inline-flex; align-items: center; margin-bottom: var(--space-3xs); }
+.pillar-cell h3 { font-size: var(--text-md); }
+.pillar-cell p { font-size: var(--text-sm); color: var(--color-ink-2); line-height: 1.62; }
+
+.dept-tab-strip { display: flex; gap: var(--space-xs); flex-wrap: wrap; }
+.dept-tab-btn { appearance: none; min-height: 38px; padding: var(--space-2xs) var(--space-md); border: var(--rule-hair) solid var(--color-rule-2); border-radius: var(--radius-pill); background-color: var(--color-paper); color: var(--color-ink-2); font-size: var(--text-sm); font-weight: 600; cursor: pointer; }
+.dept-tab-btn[aria-selected="true"] { background-color: var(--color-paper-active); border-color: var(--color-accent); color: var(--color-accent-soft-ink); font-weight: 700; }
+
+.vision-sheet { background-color: var(--color-paper); border: var(--rule-hair) solid var(--color-rule-2); padding: var(--space-lg); display: flex; flex-direction: column; gap: var(--space-sm); }
+.vision-sheet h3 { max-width: 54ch; font-size: var(--text-xl); line-height: 1.48; }
+.vision-meta { display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); flex-wrap: wrap; }
+
+.lineup-table-wrap { background-color: var(--color-paper); border-top: var(--rule-bar) solid var(--color-ink); border-bottom: var(--rule-hair) solid var(--color-rule-2); padding: var(--space-xs) var(--space-sm); overflow-x: auto; }
+.lineup-table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
+.lineup-table th, .lineup-table td { padding: var(--space-md); border-bottom: var(--rule-hair) solid var(--color-rule); text-align: left; vertical-align: top; }
+.lineup-table th { color: var(--color-muted); font-weight: 700; background-color: var(--color-paper-2); }
+.lineup-table tr:last-child td { border-bottom: none; }
+.dept-age-sub { display: block; margin-top: var(--space-3xs); font-size: var(--text-xs); color: var(--color-muted); }
+
+.two-col-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-lg); align-items: stretch; }
+.sheet-card { background-color: var(--color-paper); border: var(--rule-hair) solid var(--color-rule); border-radius: var(--radius-card); padding: var(--space-lg); display: flex; flex-direction: column; gap: var(--space-md); }
+.sheet-card--featured { border-color: var(--color-accent); background-color: var(--color-paper); }
+
+.plan-head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-sm); flex-wrap: wrap; }
+.plan-head h2 { font-size: var(--text-xl); }
+.plan-price { font-size: var(--text-2xl); font-weight: 700; font-variant-numeric: tabular-nums; color: var(--color-ink); }
+.plan-price span { font-size: var(--text-sm); font-weight: 400; color: var(--color-muted); }
+
+.check-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-sm); flex: 1; }
+.check-list li { display: flex; align-items: flex-start; gap: var(--space-xs); font-size: var(--text-sm); color: var(--color-ink-2); line-height: 1.56; }
+.check-list li svg { color: var(--color-accent); margin-top: var(--space-3xs); }
+.imprint-preview-note { margin-top: var(--space-2xs); font-family: var(--font-outlier); font-size: var(--text-sm); color: var(--color-ink-2); word-break: break-all; }
+
+@media (max-width: 56rem) {
+  .pillars-3, .two-col-grid { grid-template-columns: minmax(0, 1fr); }
+  .pillar-cell { border-right: none; border-bottom: var(--rule-hair) solid var(--color-rule); }
+  .pillar-cell:last-child { border-bottom: none; }
+}
+
+@media (max-width: 48rem) {
+  .lineup-table, .lineup-table tbody, .lineup-table tr, .lineup-table td { display: block; width: 100%; }
+  .lineup-table thead { display: none; }
+  .lineup-table tr { padding: var(--space-sm) 0; border-bottom: var(--rule-hair) solid var(--color-rule); }
+  .lineup-table tr:last-child { border-bottom: none; }
+  .lineup-table td { display: flex; justify-content: space-between; gap: var(--space-sm); padding: var(--space-2xs) var(--space-xs); border-bottom: none; text-align: right; }
+  .lineup-table td::before { content: attr(data-label); font-weight: 700; color: var(--color-muted); text-align: left; flex-shrink: 0; }
+  .lineup-table td:first-child { display: block; text-align: left; padding-bottom: var(--space-xs); margin-bottom: var(--space-2xs); border-bottom: var(--rule-hair) solid var(--color-rule); }
+  .lineup-table td:first-child::before { display: none; }
+}

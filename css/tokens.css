@@ -1,0 +1,105 @@
+/* Hallmark · shape: app screen · genre: editorial · theme: Almanac (by request)
+ * nav: 3-column lesson studio · signature: Saturday 5-minute lesson prep rail and inline reader · states: loading, empty, full, locked
+ * axes: mid/grotesk-sans/chromatic-cobalt · posture: restrained · contrast: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 · weakest: none, unified elder-friendly >=14px controls, collapsible mobile rail, and strict locked worksheet preview over flat 1px Almanac hairlines */
+
+:root {
+  color-scheme: light;
+
+  /* Surfaces (cool archival slate ground #F4F6F8 + crisp lesson sheet #FFFFFF) */
+  --color-paper: oklch(99.5% 0.005 248);
+  --color-paper-2: oklch(96.8% 0.005 248);
+  --color-paper-3: oklch(93.6% 0.008 248);
+
+  /* Ink & Rules (sharp slate-black #0F172A hierarchy) */
+  --color-ink: oklch(20.5% 0.028 258);
+  --color-ink-2: oklch(32% 0.018 252);
+  --color-muted: oklch(44% 0.016 248);
+  --color-rule: oklch(88% 0.009 248);
+  --color-rule-2: oklch(76% 0.014 248);
+
+  /* Blueprint Cobalt Ink Primary Signal */
+  --color-accent: oklch(44% 0.165 258);
+  --color-accent-2: oklch(37% 0.155 258);
+  --color-accent-ink: oklch(99.2% 0.005 248);
+  --color-paper-active: oklch(94.8% 0.026 255);
+  --color-accent-soft-ink: oklch(31% 0.125 258);
+  --color-focus: oklch(46% 0.180 258);
+
+  /* Semantic Free-Sample & Status Tokens */
+  --color-free: oklch(44% 0.095 182);
+  --color-paper-free: oklch(95.2% 0.024 182);
+  --color-free-ink: oklch(30% 0.078 182);
+  --color-free-rule: oklch(82% 0.048 182);
+
+  --color-error: oklch(49% 0.180 26);
+  --color-error-soft: oklch(95.5% 0.028 26);
+  --color-warn: oklch(46% 0.115 72);
+  --color-warn-soft: oklch(95.5% 0.036 82);
+  --color-warn-rule: oklch(84% 0.068 78);
+  --color-success: oklch(44% 0.115 155);
+
+  /* Overlays & Scrims */
+  --color-backdrop: oklch(20.5% 0.028 258 / 0.48);
+  --color-scrim-soft: oklch(99.5% 0.005 248 / 0.94);
+  --shadow-float: 0 12px 32px oklch(20.5% 0.028 258 / 0.14);
+  --shadow-seg: 0 1px 2px oklch(20.5% 0.028 258 / 0.08);
+
+  /* Typography */
+  --font-display: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --font-body: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --font-serif: "Noto Serif KR", Georgia, serif;
+  --font-outlier: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* Type Scale (presbyopia-friendly floor: controls >= 0.875rem / 14px) */
+  --text-xs: 0.8125rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.15rem;
+  --text-xl: 1.32rem;
+  --text-2xl: 1.52rem;
+  --text-hero: clamp(1.75rem, 2.7vw, 2.3rem);
+  --text-display: 1.65rem;
+  --text-section: 1.32rem;
+  --text-title: 1.12rem;
+  --tracking-display: -0.02em;
+  --display-weight: 700;
+
+  /* Spacing Scale (4px rhythm) */
+  --space-3xs: 2px;
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+
+  /* Structure & Radii */
+  --container: 1440px;
+  --gutter: var(--space-lg);
+  --gap-columns: var(--space-lg);
+  --radius-card: 4px;
+  --radius-control: 4px;
+  --radius-pill: 999px;
+  --rule-hair: 1px;
+  --rule-bar: 2px;
+  --shadow-card: none;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 200ms;
+  --dur-long: 340ms;
+
+  /* Z-Layers */
+  --z-base: 1;
+  --z-raised: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal: 400;
+  --z-toast: 500;
+}
